@@ -1,6 +1,6 @@
-# eslint-config-fluct
+# eslint-config-abema
 
-[![Build Status](https://travis-ci.org/voyagegroup/eslint-config-fluct.svg?branch=master)](https://travis-ci.org/voyagegroup/eslint-config-fluct)
+[![Build Status](https://travis-ci.org/cats-oss/eslint-config-abema.svg?branch=master)](https://travis-ci.org/cats-oss/eslint-config-abema)
 
 ## Basic Principles for Settings
 
@@ -20,9 +20,9 @@
 
 ### 1. install to your project
 
-- as npm package (TBD. see [#23](https://github.com/voyagegroup/eslint-config-fluct/issues/23))
+- as npm package (TBD)
 - Specify tar.gz to a dependency field in your package.json.
-  - `"eslint-config-fluct": "https://github.com/voyagegroup/eslint-config-fluct/archive/<COMMIT_HASH>.tar.gz"`.
+  - `"eslint-config-fluct": "https://github.com/cats-oss/eslint-config-abema/archive/<COMMIT_HASH>.tar.gz"`.
   - Please replace `<COMMIT_HASH>` with tag name (e.g. `v1.2.3`), or an arbitary commit hash.
     - You can specify `master` or other branch directly. But we don't recommend it strongly.
 
@@ -34,9 +34,9 @@
 
 module.exports = {
     'extends': [
-        './node_modules/eslint-config-fluct/config/eslintrc_core.js', // for eslint's builtin rules.
-        './node_modules/eslint-config-fluct/config/eslintrc_node.js', // for eslint-plugin-node
-        './node_modules/eslint-config-fluct/config/eslintrc_react.js', // for eslint-plugin-react
+        './node_modules/eslint-config-abema/config/eslintrc_core.js', // for eslint's builtin rules.
+        './node_modules/eslint-config-abema/config/eslintrc_node.js', // for eslint-plugin-node
+        './node_modules/eslint-config-abema/config/eslintrc_react.js', // for eslint-plugin-react
     ]
 };
 ```

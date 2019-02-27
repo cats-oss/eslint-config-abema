@@ -27,7 +27,7 @@ lint:
 module.exports = {
 
     'extends': [
-        './node_modules/eslint-config-fluct/config/eslintrc_core.js',
+        './node_modules/eslint-config-abema/config/eslintrc_core.js',
     ],
 
     // Specify a parser's `ecmaVersion` to disable parsing syntax
