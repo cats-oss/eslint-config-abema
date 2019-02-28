@@ -54,8 +54,9 @@ module.exports = {
 
 ## License
 
-- [The MIT License](./LICENSE.txt)
-  - Original: https://opensource.org/licenses/MIT
+- [The MIT License](./LICENSE.txt). ([Original](https://opensource.org/licenses/MIT))
+- We comply and inherit the license for the original source code.
+
 
  ## Dependencies
 
