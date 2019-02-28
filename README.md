@@ -1,7 +1,5 @@
 # eslint-config-abema
 
-[![Build Status](https://travis-ci.org/cats-oss/eslint-config-abema.svg?branch=master)](https://travis-ci.org/cats-oss/eslint-config-abema)
-
 ## Basic Principles for Settings
 
 - Ban a dangerous style.
