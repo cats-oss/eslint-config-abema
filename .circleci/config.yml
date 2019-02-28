@@ -1,0 +1,45 @@
+version: 2.1
+
+###########################################
+# Constants
+###########################################
+workspace_root: &workspace_root
+    ~/repo
+
+
+###########################################
+# Executors Definitions
+###########################################
+executors:
+    build_executor:
+        working_directory: *workspace_root
+        docker:
+            - image: circleci/node:11
+
+
+###########################################
+# Commands Definitions
+###########################################
+commands:
+
+
+###########################################
+# Job Definitions
+###########################################
+jobs:
+   test:
+        executor: build_executor
+        steps:
+            - checkout
+            - run: yarn
+            - run: yarn run test
+
+
+###########################################
+# Workflow Definitions
+###########################################
+workflows:
+    version: 2
+    build_and_test:
+        jobs:
+            - test

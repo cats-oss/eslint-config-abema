@@ -1,5 +1,7 @@
 # eslint-config-abema
 
+[![CircleCI](https://circleci.com/gh/cats-oss/eslint-config-abema.svg?style=svg)](https://circleci.com/gh/cats-oss/workflows/eslint-config-abema)
+
 ## Basic Principles for Settings
 
 - Ban a dangerous style.
