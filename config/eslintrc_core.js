@@ -305,7 +305,9 @@ module.exports = {
             // Ban the way to reflection by strings (Enable explicitly if you'd like to use).
             'ForInStatement'
         ],
-        'no-tabs': 2,
+        'no-tabs': [2, {
+            'allowIndentationTabs': false,
+        }],
         'no-ternary': 0, // https://eslint.org/docs/rules/no-ternary
         'no-trailing-spaces': 1,
         'no-underscore-dangle': [2, { // Ban the name which starts with `_`.
