@@ -62,3 +62,19 @@ module.exports = {
 
 - [yarn](https://yarnpkg.com/)
   - We uses the latest now.
+
+
+## Why did you fork this project form [the original](https://github.com/voyagegroup/eslint-config-fluct)?
+
+Ideally, according to common culture of open source software,
+we should contribute a code to the upstream (original) source code repository
+instead of forking the project. It's not nice effort for open source project community
+that creating a forked project recklessly and it wastes the limited humanity resource
+by re-implement a similar change in each of projects.
+
+However, we needed to maintain this by our domain specific motivations.
+It's a bit hard to merge them to the upstream side by the difference of project goals
+and the difference of requirement of maintainers.
+
+Therefore, we decided to fork this project from the original one.
+We thank to their effort to develop and maintain the original project.
