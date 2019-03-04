@@ -72,6 +72,11 @@ module.exports = {
 - It's the best way to use [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 
 
+#### Work with [`@typescript-eslint/eslint-plugin-tslint`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin-tslint)
+
+- [We don't have any plan to support it](https://github.com/cats-oss/eslint-config-abema/issues/42).
+
+
 ## Dependencies
 
 - [yarn](https://yarnpkg.com/)
