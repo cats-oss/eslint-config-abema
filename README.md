@@ -2,6 +2,10 @@
 
 [![CircleCI](https://circleci.com/gh/cats-oss/eslint-config-abema.svg?style=svg)](https://circleci.com/gh/cats-oss/workflows/eslint-config-abema)
 
+* This project is presets for eslint which we use in our some internal projects.
+* This project focuses to construct ideal configuration.
+
+
 ## Basic Principles for Settings
 
 - Ban a dangerous style.
@@ -54,19 +58,19 @@ module.exports = {
 - [For web browsers which support only ES5](./example/ES5_BROWSER.md).
 
 
-## License
-
-- [The MIT License](./LICENSE.txt). ([Original](https://opensource.org/licenses/MIT))
-- We comply and inherit the license for the original source code.
-
-
- ## Dependencies
+## Dependencies
 
 - [yarn](https://yarnpkg.com/)
   - We uses the latest now.
 
 
-## Why did you fork this project form [the original](https://github.com/voyagegroup/eslint-config-fluct)?
+## About This Project
+
+* This project is forked from [voyagegroup/eslint-config-fluct](https://github.com/voyagegroup/eslint-config-fluct).
+* The diff is [here](https://github.com/cats-oss/eslint-config-abema/compare/original...master).
+
+
+### Why did you fork this project from the original?
 
 Ideally, according to common culture of open source software,
 we should contribute a code to the upstream (original) source code repository
@@ -80,3 +84,9 @@ and the difference of requirement of maintainers.
 
 Therefore, we decided to fork this project from the original one.
 We thank to their effort to develop and maintain the original project.
+
+
+### License
+
+- [The MIT License](./LICENSE.txt). ([Original](https://opensource.org/licenses/MIT))
+- We comply and inherit the license for the original source code.
