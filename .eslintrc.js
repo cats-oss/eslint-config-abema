@@ -12,6 +12,7 @@ module.exports = {
     // to check them by schemes by theirs.
     'extends': [
         './config/eslintrc_core.js',
+        './config/eslintrc_import.js',
         './config/eslintrc_node.js',
         './config/eslintrc_react.js',
     ],
