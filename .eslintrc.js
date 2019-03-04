@@ -19,7 +19,7 @@ module.exports = {
     // This option is only applied to this project
     // (This will not be applied for an user project).
     'parserOptions': {
-        'ecmaVersion': 6,
+        'ecmaVersion': 2018,
         'sourceType': 'script',
     },
 
