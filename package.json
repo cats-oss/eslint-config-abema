@@ -22,17 +22,20 @@
     "eslint": "^5.14.1"
   },
   "optionalDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.4.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
     "eslint": "^5.14.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.4.0"
+    "eslint-plugin-react-hooks": "^1.4.0",
+    "typescript": "^3.3.3333"
   }
 }
