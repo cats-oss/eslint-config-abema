@@ -42,6 +42,7 @@ module.exports = {
         'eslint-config-abema/config/eslintrc_import.js', // for eslint-plugin-import
         'eslint-config-abema/config/eslintrc_node.js', // for eslint-plugin-node
         'eslint-config-abema/config/eslintrc_react.js', // for eslint-plugin-react
+        'eslint-config-abema/config/eslintrc_react_hooks.js', // for eslint-plugin-react-hooks
     ]
 };
 ```

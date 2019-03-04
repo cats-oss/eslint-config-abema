@@ -15,6 +15,7 @@ module.exports = {
         './config/eslintrc_import.js',
         './config/eslintrc_node.js',
         './config/eslintrc_react.js',
+        './config/eslintrc_react_hooks.js',
     ],
 
     // This option is only applied to this project
