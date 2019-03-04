@@ -46,6 +46,8 @@ module.exports = {
         'eslint-config-abema/config/eslintrc_react.js', // for eslint-plugin-react
         'eslint-config-abema/config/eslintrc_react_hooks.js', // for eslint-plugin-react-hooks
 
+        'eslint-config-abema/config/eslintrc_typescript.js', // for @typescript-eslint/eslint-plugin. EXPERIMENTAL
+
         // If you'd like to use eslint-plugin-react with TypeScript, you should load this instead.
         'eslint-config-abema/config/eslintrc_typescript_react.js',
     ]
