@@ -59,6 +59,11 @@ module.exports = {
 - [For web browsers which support only ES5](./example/ES5_BROWSER.md).
 
 
+#### Work with [Prettier](https://github.com/prettier/prettier)
+
+- It's the best way to use [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+
+
 ## Dependencies
 
 - [yarn](https://yarnpkg.com/)
