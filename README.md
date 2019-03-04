@@ -39,6 +39,7 @@
 module.exports = {
     'extends': [
         './node_modules/eslint-config-abema/config/eslintrc_core.js', // for eslint's builtin rules.
+        './node_modules/eslint-config-abema/config/eslintrc_import.js', // for eslint-plugin-import
         './node_modules/eslint-config-abema/config/eslintrc_node.js', // for eslint-plugin-node
         './node_modules/eslint-config-abema/config/eslintrc_react.js', // for eslint-plugin-react
     ]

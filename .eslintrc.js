@@ -12,6 +12,7 @@ module.exports = {
     // to check them by schemes by theirs.
     'extends': [
         './config/eslintrc_core.js',
+        './config/eslintrc_import.js',
         './config/eslintrc_node.js',
         './config/eslintrc_react.js',
     ],
@@ -19,7 +20,7 @@ module.exports = {
     // This option is only applied to this project
     // (This will not be applied for an user project).
     'parserOptions': {
-        'ecmaVersion': 6,
+        'ecmaVersion': 2018,
         'sourceType': 'script',
     },
 
