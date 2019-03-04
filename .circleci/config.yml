@@ -32,7 +32,7 @@ jobs:
         steps:
             - checkout
             - run: yarn
-            - run: yarn run test
+            - run: make test -j
 
 
 ###########################################
