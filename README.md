@@ -66,7 +66,7 @@ module.exports = {
 
 #### Examples
 
-- [For web browsers which support only ES5](./example/ES5_BROWSER.md).
+- [For web browsers which support only ES5](./docs/ES5_BROWSER.md).
 
 
 #### Work with [Prettier](https://github.com/prettier/prettier)
