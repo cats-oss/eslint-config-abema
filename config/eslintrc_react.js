@@ -162,7 +162,18 @@ module.exports = {
             'enforceDynamicLinks': 'always',
         }],
         'react/jsx-no-undef': 2,
-        'react/jsx-curly-brace-presence': [1, 'always'],
+        // This rule is conservative choice for plain JS world.
+        'react/jsx-curly-brace-presence': ['warn', {
+            // In JSX syntax, `props` is not a string in many cases.
+            // And in plain JavaScript worlds, we don't have any static type checks,
+            // we need think about whether we should add a bracket or not by the type of props.
+            // It's pretty tired thing.
+            // For sorting style and avoid this tired thing, I prefer to write bracket always.
+            'props': 'always',
+            // I think we also enable this for children,
+            // but the current rule impl. is pretty buggy and noisey. It's better to disable it.
+            'children': 'ignore',
+        }],
         'react/jsx-pascal-case': [2, {
             'allowAllCaps': false,
             'ignore': [],
