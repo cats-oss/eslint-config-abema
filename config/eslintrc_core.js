@@ -131,6 +131,7 @@ module.exports = {
         'no-unused-expressions': 2, // https://eslint.org/docs/rules/no-unused-expressions
         'no-unused-labels': 2, // https://eslint.org/docs/rules/no-unused-labels
         'no-useless-call': 1,
+        'no-useless-catch': 1, // There is no reason to disable this.
         'no-useless-concat': 1,
         'no-useless-escape': 1,
         'no-useless-return': 1, // https://eslint.org/docs/rules/no-useless-return
