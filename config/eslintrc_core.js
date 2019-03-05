@@ -55,11 +55,6 @@ module.exports = {
         // So we regard this rule as meaningless actually and disable this.
         'require-atomic-updates ': 0, // https://eslint.org/docs/rules/require-atomic-updates
         'use-isnan': 2, // Use `Number.isNaN`
-        'valid-jsdoc': [2, {
-            'requireReturn': true,
-            'requireParamDescription': false,
-            'requireReturnDescription': false,
-        }],
         'valid-typeof': [1, {'requireStringLiterals': true}],
 
         // Best Practices
@@ -362,14 +357,6 @@ module.exports = {
             'allowTemplateLiterals': true,
         }],
         'quote-props': 0, // `bar-foo` without quote will be parse error if we disable this rules.
-        'require-jsdoc': [0, {
-            'require': {
-                'FunctionDeclaration': true,
-                'MethodDefinition': true,
-                'ClassDeclaration': true,
-                'ArrowFunctionExpression': true,
-            }
-        }],
         'semi': [2, 'always'], // Enfoce semicolon.
         'semi-spacing':[2, { // Ban a space char before semicolon.
             'before': false,
