@@ -30,5 +30,8 @@ module.exports = {
             'caughtErrors': 'all',
             'caughtErrorsIgnorePattern': '^_', // Allow `catch (_e) {...}`
         }],
+
+        // This bans legacy syntax.
+        '@typescript-eslint/prefer-namespace-keyword': 'error',
     }
 };
