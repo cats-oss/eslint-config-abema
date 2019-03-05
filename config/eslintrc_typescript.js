@@ -60,7 +60,10 @@ module.exports = {
         // TODO: @typescript-eslint/no-extraneous-class
         // TODO: @typescript-eslint/no-for-in-array
         // TODO: @typescript-eslint/no-inferrable-types
-        // TODO: @typescript-eslint/no-misused-new
+
+        // Ban the misused style aggressively
+        '@typescript-eslint/no-misused-new': 'error',
+
         // TODO: @typescript-eslint/no-namespace
 
         // Please opt-out this rule if you don't have any workarounds.
