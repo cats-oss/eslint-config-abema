@@ -15,6 +15,11 @@ module.exports = {
         // and we need to write `let a: T | null = null;` even if a will not be `null`.
         'init-declarations': 'off',
 
+        // Please opt-out this rule if you don't have any workarounds.
+        '@typescript-eslint/no-explicit-any': 'warn',
+        // Please opt-out this rule if you don't have any workarounds.
+        '@typescript-eslint/no-non-null-assertion': 'warn',
+
         // the default `no-unused-vars` is not support type annotations.
         'no-unused-vars': 'off',
         // Sort values with `no-unused-vars` provided by core.
