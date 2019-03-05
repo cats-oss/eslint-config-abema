@@ -2,9 +2,11 @@
 
 [![CircleCI](https://circleci.com/gh/cats-oss/eslint-config-abema.svg?style=svg)](https://circleci.com/gh/cats-oss/workflows/eslint-config-abema)
 
+## What is This?
+
 * This project is presets for eslint which we use in our some internal projects.
-* This project focus to construct ideal configuration.
-* This project **does not target to zero-config presets**.
+* This project **focus to build an ideal configuration**.
+* This project **does not target a zero-config presets**.
   * This project just target presets of rules to set up your project _conveniently_.
 
 
@@ -40,13 +42,23 @@
 
 module.exports = {
     'extends': [
-        'eslint-config-abema/config/eslintrc_core.js', // for eslint's builtin rules.
-        'eslint-config-abema/config/eslintrc_import.js', // for eslint-plugin-import
-        'eslint-config-abema/config/eslintrc_node.js', // for eslint-plugin-node
-        'eslint-config-abema/config/eslintrc_react.js', // for eslint-plugin-react
-        'eslint-config-abema/config/eslintrc_react_hooks.js', // for eslint-plugin-react-hooks
+        // for eslint's builtin rules.
+        'eslint-config-abema/config/eslintrc_core.js',
+        
+        // for eslint-plugin-import
+        'eslint-config-abema/config/eslintrc_import.js',
+        
+        // for eslint-plugin-node
+        'eslint-config-abema/config/eslintrc_node.js',
+        
+        // for eslint-plugin-react
+        'eslint-config-abema/config/eslintrc_react.js',
 
-        'eslint-config-abema/config/eslintrc_typescript.js', // for @typescript-eslint/eslint-plugin. EXPERIMENTAL
+        // for eslint-plugin-react-hooks
+        'eslint-config-abema/config/eslintrc_react_hooks.js',
+
+        // for @typescript-eslint/eslint-plugin. EXPERIMENTAL
+        'eslint-config-abema/config/eslintrc_typescript.js',
 
         // If you'd like to use eslint-plugin-react with TypeScript, you should load this instead.
         'eslint-config-abema/config/eslintrc_typescript_react.js',
@@ -64,17 +76,11 @@ module.exports = {
 
 #### Examples
 
-- [For web browsers which support only ES5](./example/ES5_BROWSER.md).
-
-
-#### Work with [Prettier](https://github.com/prettier/prettier)
-
-- It's the best way to use [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-
-
-#### Work with [`@typescript-eslint/eslint-plugin-tslint`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin-tslint)
-
-- [We don't have any plan to support it](https://github.com/cats-oss/eslint-config-abema/issues/42).
+- [For web browsers which support only ES5](./docs/ES5_BROWSER.md).
+- Work with [Prettier](https://github.com/prettier/prettier)
+  - It's the best way to use [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+- Work with [`@typescript-eslint/eslint-plugin-tslint`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin-tslint)
+  - [We don't have any plan to support it](https://github.com/cats-oss/eslint-config-abema/issues/42).
 
 
 ## Dependencies
