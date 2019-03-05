@@ -2,9 +2,11 @@
 
 [![CircleCI](https://circleci.com/gh/cats-oss/eslint-config-abema.svg?style=svg)](https://circleci.com/gh/cats-oss/workflows/eslint-config-abema)
 
+## What is This?
+
 * This project is presets for eslint which we use in our some internal projects.
-* This project focus to construct ideal configuration.
-* This project **does not target to zero-config presets**.
+* This project **focus to build an ideal configuration**.
+* This project **does not target a zero-config presets**.
   * This project just target presets of rules to set up your project _conveniently_.
 
 
