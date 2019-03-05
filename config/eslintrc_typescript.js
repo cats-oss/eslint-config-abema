@@ -10,11 +10,6 @@ module.exports = {
     ],
 
     'rules': {
-        // This rule conflicts with the pattern of TypeScript like `let a: T;`.
-        // If we keep this rule, `let: a: T;` would be error
-        // and we need to write `let a: T | null = null;` even if a will not be `null`.
-        'init-declarations': 'off',
-
         // I don't think it's not efffective to sort the order by public/private/protected.
         '@typescript-eslint/member-ordering': ['warn', {
             // * I'd like to aggregate instance fields
