@@ -21,7 +21,19 @@ module.exports = {
         // TODO: @typescript-eslint/generic-type-naming
         // TODO: @typescript-eslint/indent
         // TODO: @typescript-eslint/interface-name-prefix
-        // TODO: @typescript-eslint/member-delimiter-style
+
+        // Sort with the preferred style (`;`) in TypeScript world.
+        '@typescript-eslint/member-delimiter-style': ['warn', {
+            'multiline': {
+                'delimiter': 'semi',
+                'requireLast': true,
+            },
+            'singleline': {
+                'delimiter': 'semi',
+                'requireLast': true,
+            }
+        }],
+
         // TODO: @typescript-eslint/member-naming
 
         // I don't think it's not efffective to sort the order by public/private/protected.
