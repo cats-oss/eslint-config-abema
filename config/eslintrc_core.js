@@ -163,7 +163,25 @@ module.exports = {
         'strict': [2, 'global'],
 
         // Variables
-        'init-declarations': [2, 'always'],
+
+        //  We think it would not be a large problem to disable this rule.
+        //
+        //  Historically, in ~ES5, we cannot distinguish a variables because there is no `const`.
+        //  So it reduces a problems to enforce to initialize a variable with some values.
+        //
+        //  Historically (again), some developers who lives in ~ES5 assigns various typed values to them
+        //  This habit sometimes stagger the type of variables and its bad habit prevents JSVM's optimizations for a long time.
+        //  So it has some guide effects for _humans_ to initialize a variable with some value to express the type of its variable.
+        //
+        //  However, today is post ES6 and we prefer to use `const` declaration by default,
+        //  and we have more stuffs to analyze our code on demand.
+        //  If we disable this rule, Lacking an initialization for `const` would be a parse error.
+        //  we think it's less problem to disable this rule.
+        //
+        //  And this rule conflicts with the pattern of TypeScript like `let a: T;`.
+        //  If we keep to enable this rule, `let: a: T;` would be error
+        //  and we need to write `let a: T | null = null;` even if a will not be `null`. This is not useful.
+        'init-declarations': 'off',
         'no-delete-var': 2, // In a general case, we don't have to do this.
         'no-label-var': 2,
         'no-restricted-globals' : [2, // https://eslint.org/docs/rules/no-restricted-globals
