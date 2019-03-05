@@ -10,6 +10,11 @@ module.exports = {
     ],
 
     'rules': {
+        // This rule conflicts with the pattern of TypeScript like `let a: T;`.
+        // If we keep this rule, `let: a: T;` would be error
+        // and we need to write `let a: T | null = null;` even if a will not be `null`.
+        'init-declarations': 'off',
+
         // the default `no-unused-vars` is not support type annotations.
         'no-unused-vars': 'off',
         // Sort values with `no-unused-vars` provided by core.
