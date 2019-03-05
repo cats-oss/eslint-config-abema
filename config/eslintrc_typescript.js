@@ -75,7 +75,10 @@ module.exports = {
         }],
 
         // TODO: @typescript-eslint/no-use-before-define
-        // TODO: @typescript-eslint/no-useless-constructor
+
+        // We should sort with builtin rule.
+        '@typescript-eslint/no-useless-constructor': 'off',
+
         // TODO: @typescript-eslint/no-var-requires
         // TODO: @typescript-eslint/prefer-function-type
         // TODO: @typescript-eslint/prefer-interface
