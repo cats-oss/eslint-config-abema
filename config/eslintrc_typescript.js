@@ -35,7 +35,7 @@ module.exports = {
         // A class & interface should be PascalCased
         '@typescript-eslint/class-name-casing': 'error',
 
-        // TODO: @typescript-eslint/explicit-function-return-type
+        // TODO: (#64) @typescript-eslint/explicit-function-return-type
 
         // It's redundant to enforce to supply `public`.
         '@typescript-eslint/explicit-member-accessibility': 'off',
@@ -81,7 +81,7 @@ module.exports = {
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-explicit-any': 'warn',
 
-        // TODO: @typescript-eslint/no-extraneous-class
+        // TODO: (#63) @typescript-eslint/no-extraneous-class
 
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
