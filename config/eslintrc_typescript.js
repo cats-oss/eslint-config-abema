@@ -11,7 +11,12 @@ module.exports = {
 
     'rules': {
         // TODO: @typescript-eslint/adjacent-overload-signatures
-        // TODO: @typescript-eslint/array-type
+
+        // TypeScript allows both forms of `[]` and `Array<T>`.
+        // But typescript compiler also supports `ReadonlyArray<T>` builtin type and others.
+        // So I seem it's nice to sort with `Array<T>` to decrease impedance mismatch.
+        '@typescript-eslint/array-type': ['warn', 'generic'],
+
         // TODO: @typescript-eslint/ban-types
 
         // `@ts-ignore` violates all static type checkings for _all expressions_ in the next line.
