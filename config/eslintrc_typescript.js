@@ -54,7 +54,9 @@ module.exports = {
             ],
         }],
 
-        // TODO: @typescript-eslint/no-angle-bracket-type-assertion
+        // Sort the style in both of ts and tsx.
+        '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
+
         // TODO: @typescript-eslint/no-array-constructor
         // TODO: @typescript-eslint/no-empty-interface
 
