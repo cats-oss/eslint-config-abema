@@ -86,7 +86,9 @@ module.exports = {
         // Sort the style in both of ts and tsx.
         '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
 
-        // TODO: @typescript-eslint/no-array-constructor
+        // This should be sorted with ESLint builtin rule.
+        'no-array-constructor': 'off',
+        '@typescript-eslint/no-array-constructor': 'error',
 
         // It works as a marker that to implement some interfaces.
         '@typescript-eslint/no-empty-interface': 'off',
