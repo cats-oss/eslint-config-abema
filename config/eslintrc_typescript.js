@@ -107,7 +107,9 @@ module.exports = {
 
         // TODO: @typescript-eslint/no-var-requires
         // TODO: @typescript-eslint/prefer-function-type
-        // TODO: @typescript-eslint/prefer-interface
+
+        // Each style has its own pros & cons.
+        '@typescript-eslint/prefer-interface': 'off',
 
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
