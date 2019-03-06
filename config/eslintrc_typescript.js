@@ -138,7 +138,10 @@ module.exports = {
         // because then user would know what they are doing.
         '@typescript-eslint/no-var-requires': 'off',
 
-        // TODO: @typescript-eslint/prefer-function-type
+        // I seem almost user would use simple function type.
+        // A person who uses an interface to express callbable signature is
+        // know what they are doing.
+        '@typescript-eslint/prefer-function-type': 'error',
 
         // Each style has its own pros & cons.
         '@typescript-eslint/prefer-interface': 'off',
