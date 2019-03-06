@@ -97,7 +97,10 @@ module.exports = {
         }],
 
         // TODO: @typescript-eslint/no-triple-slash-reference
-        // TODO: @typescript-eslint/no-type-alias
+
+        // Disabling this does not make sense completely.
+        '@typescript-eslint/no-type-alias': 'off',
+
         // TODO: @typescript-eslint/no-unnecessary-qualifier
         // TODO: @typescript-eslint/no-unnecessary-type-assertion
 
