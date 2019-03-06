@@ -124,7 +124,11 @@ module.exports = {
         // We should sort with builtin rule.
         '@typescript-eslint/no-useless-constructor': 'off',
 
-        // TODO: @typescript-eslint/no-var-requires
+        // Basically, we would not use `require()` and ban its style with @typescript-eslint/no-require-imports.
+        // Thus it's emergency case if user disable its rule explicitly and we hasitate to stop it
+        // because then user would know what they are doing.
+        '@typescript-eslint/no-var-requires': 'off',
+
         // TODO: @typescript-eslint/prefer-function-type
 
         // Each style has its own pros & cons.
