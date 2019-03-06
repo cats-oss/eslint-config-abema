@@ -30,7 +30,10 @@ module.exports = {
         '@typescript-eslint/class-name-casing': 'error',
 
         // TODO: @typescript-eslint/explicit-function-return-type
-        // TODO: @typescript-eslint/explicit-member-accessibility
+
+        // It's redundant to enforce to supply `public`.
+        '@typescript-eslint/explicit-member-accessibility': 'off',
+
         // TODO: @typescript-eslint/generic-type-naming
         // TODO: @typescript-eslint/indent
         // TODO: @typescript-eslint/interface-name-prefix
