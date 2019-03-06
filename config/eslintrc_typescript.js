@@ -35,7 +35,13 @@ module.exports = {
         // A class & interface should be PascalCased
         '@typescript-eslint/class-name-casing': 'error',
 
-        // TODO: (#64) @typescript-eslint/explicit-function-return-type
+        // We should annotate the in/out type of functions because programms are built with a bunch of functions.
+        // It makes type safe world easy and we should express the type signature as documentation of their functions.
+        '@typescript-eslint/explicit-function-return-type': ['warn', {
+            // This rule is pretty tired for expressions because we use function expression
+            // as a callback. Let's disable its case.
+            'allowExpressions': true,
+        }],
 
         // It's redundant to enforce to supply `public`.
         '@typescript-eslint/explicit-member-accessibility': 'off',
