@@ -82,7 +82,10 @@ module.exports = {
 
         // TODO: @typescript-eslint/no-object-literal-type-assertion
         // TODO: @typescript-eslint/no-parameter-properties
-        // TODO: @typescript-eslint/no-require-imports
+
+        // Today, we should use ES Module import in general (almost) case.
+        '@typescript-eslint/no-require-imports': 'error',
+
         // TODO: @typescript-eslint/no-this-alias
         // TODO: @typescript-eslint/no-triple-slash-reference
         // TODO: @typescript-eslint/no-type-alias
