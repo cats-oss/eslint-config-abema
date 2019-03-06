@@ -85,7 +85,11 @@ module.exports = {
         // Ban the misused style aggressively
         '@typescript-eslint/no-misused-new': 'error',
 
-        // TODO: @typescript-eslint/no-namespace
+        // Only allow declarations. Use ES Module in almost projects.
+        '@typescript-eslint/no-namespace': ['error', {
+            'allowDeclarations': true,
+            'allowDefinitionFiles': true,
+        }],
 
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-non-null-assertion': 'warn',
