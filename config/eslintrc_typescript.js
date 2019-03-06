@@ -13,7 +13,11 @@ module.exports = {
         // TODO: @typescript-eslint/adjacent-overload-signatures
         // TODO: @typescript-eslint/array-type
         // TODO: @typescript-eslint/ban-types
-        // TODO: @typescript-eslint/ban-ts-ignore
+
+        // `@ts-ignore` violates all static type checkings for _all expressions_ in the next line.
+        // It will not be too much warn about it.
+        '@typescript-eslint/ban-ts-ignore': 'error',
+
         // TODO: @typescript-eslint/camelcase
         // TODO: @typescript-eslint/class-name-casing
         // TODO: @typescript-eslint/explicit-function-return-type
