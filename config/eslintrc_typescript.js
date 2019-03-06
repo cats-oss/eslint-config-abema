@@ -25,7 +25,10 @@ module.exports = {
         '@typescript-eslint/ban-ts-ignore': 'error',
 
         // TODO: @typescript-eslint/camelcase
-        // TODO: @typescript-eslint/class-name-casing
+
+        // A class & interface should be PascalCased
+        '@typescript-eslint/class-name-casing': 'error',
+
         // TODO: @typescript-eslint/explicit-function-return-type
         // TODO: @typescript-eslint/explicit-member-accessibility
         // TODO: @typescript-eslint/generic-type-naming
