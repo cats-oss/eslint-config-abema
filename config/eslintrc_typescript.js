@@ -56,6 +56,19 @@ module.exports = {
             }
         }],
 
+        // By these reasons, I think we recommend to add `_` prefix to private fields.
+        //
+        //  * Historically, JavaScript wolrd use `_` prefix to mark fields as _private_.
+        //  * Until coming [private fields of class field declarations proposal](https://github.com/tc39/proposal-class-fields),
+        //    there is no true private fields in JavaScript.
+        //      * If TypeScript compiler supports it, it might be better to relax this rule.
+        //  * TypeScript will be transformed into plain JavaScript and plain JavaScript does not any informations
+        //    to express whether a field is private or not.
+        '@typescript-eslint/member-naming': ['warn', {
+            'private': '^_',
+            'protected': '^_',
+        }],
+
         // I don't think it's not efffective to sort the order by public/private/protected.
         '@typescript-eslint/member-ordering': ['warn', {
             // * I'd like to aggregate instance fields
