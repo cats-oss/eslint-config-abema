@@ -104,7 +104,15 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'warn',
 
         // TODO: @typescript-eslint/no-object-literal-type-assertion
-        // TODO: @typescript-eslint/no-parameter-properties
+
+        // This TypeScript syntax is useful to reduce declarations of class properties.
+        // However, we feel this syntax has these negative points:
+        //
+        //  * This is not a part of ECMA262 standards.
+        //  * This makes the ordering of initializing members unclear.
+        //
+        // By these things, we enable this rule as defensive choice.
+        '@typescript-eslint/no-parameter-properties': 'error',
 
         // Today, we should use ES Module import in general (almost) case.
         '@typescript-eslint/no-require-imports': 'error',
