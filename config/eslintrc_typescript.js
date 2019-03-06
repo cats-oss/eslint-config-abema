@@ -47,8 +47,6 @@ module.exports = {
             }
         }],
 
-        // TODO: @typescript-eslint/member-naming
-
         // I don't think it's not efffective to sort the order by public/private/protected.
         '@typescript-eslint/member-ordering': ['warn', {
             // * I'd like to aggregate instance fields
