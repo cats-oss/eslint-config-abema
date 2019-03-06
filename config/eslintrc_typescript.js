@@ -17,7 +17,8 @@ module.exports = {
         // So I seem it's nice to sort with `Array<T>` to decrease impedance mismatch.
         '@typescript-eslint/array-type': ['warn', 'generic'],
 
-        // TODO: @typescript-eslint/ban-types
+        // We cannot define this. User project should enable this.
+        '@typescript-eslint/ban-types': 'off',
 
         // `@ts-ignore` violates all static type checkings for _all expressions_ in the next line.
         // It will not be too much warn about it.
