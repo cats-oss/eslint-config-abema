@@ -73,7 +73,10 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'warn',
 
         // TODO: @typescript-eslint/no-extraneous-class
-        // TODO: @typescript-eslint/no-for-in-array
+
+        // This is common pitfalls for beginners. We must ban.
+        '@typescript-eslint/no-for-in-array': 'error',
+
         // TODO: @typescript-eslint/no-inferrable-types
 
         // Ban the misused style aggressively
