@@ -10,7 +10,8 @@ module.exports = {
     ],
 
     'rules': {
-        // TODO: @typescript-eslint/adjacent-overload-signatures
+        // Basically, it's nice to uniform the order of overload signatures.
+        '@typescript-eslint/adjacent-overload-signatures': 'warn',
 
         // TypeScript allows both forms of `[]` and `Array<T>`.
         // But typescript compiler also supports `ReadonlyArray<T>` builtin type and others.
