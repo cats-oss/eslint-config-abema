@@ -102,7 +102,8 @@ module.exports = {
             'allowedNames': ['self'],
         }],
 
-        // TODO: @typescript-eslint/no-triple-slash-reference
+        // Basically, use ES Module import. // <reference path="" /> is just special case.
+        '@typescript-eslint/no-triple-slash-reference': 'error',
 
         // Disabling this does not make sense completely.
         '@typescript-eslint/no-type-alias': 'off',
