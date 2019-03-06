@@ -108,7 +108,14 @@ module.exports = {
             'caughtErrorsIgnorePattern': '^_', // Allow `catch (_e) {...}`
         }],
 
-        // TODO: @typescript-eslint/no-use-before-define
+        // This should be sorted with ESLint builtin rule.
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error', {
+            'functions': false, //  Function declarations are hoisted.
+            'classes': true, // Class declarations are not hoisted. We should warn it.
+            'variables': true, // for Temporary Dead Zone.
+            'typedefs': true, // We rely TypeScript compiler.
+        }],
 
         // We should sort with builtin rule.
         '@typescript-eslint/no-useless-constructor': 'off',
