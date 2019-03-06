@@ -152,7 +152,8 @@ module.exports = {
         // Disabling this does not make sense completely.
         '@typescript-eslint/no-type-alias': 'off',
 
-        // TODO: @typescript-eslint/no-unnecessary-qualifier
+        // Try to detect redundant case,
+        '@typescript-eslint/no-unnecessary-qualifier': 'warn',
 
         // We allow this this kind of redundant code because it sometimes prevents a mistake.
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
