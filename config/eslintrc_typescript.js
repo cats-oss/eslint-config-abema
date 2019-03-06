@@ -80,7 +80,10 @@ module.exports = {
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
 
-        // TODO: @typescript-eslint/no-inferrable-types
+        // Type inference is useful feature for Gradual Typing and other static typing system.
+        // However, over omission would increases compile (type checking) time and
+        // lacks the aspect of type annotation benefits as _documentation_.
+        '@typescript-eslint/no-inferrable-types': 'off',
 
         // Ban the misused style aggressively
         '@typescript-eslint/no-misused-new': 'error',
