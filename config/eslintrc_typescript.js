@@ -103,7 +103,8 @@ module.exports = {
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-non-null-assertion': 'warn',
 
-        // TODO: @typescript-eslint/no-object-literal-type-assertion
+        // Uniform the style.
+        '@typescript-eslint/no-object-literal-type-assertion': 'warn',
 
         // This TypeScript syntax is useful to reduce declarations of class properties.
         // However, we feel this syntax has these negative points:
