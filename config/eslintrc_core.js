@@ -225,6 +225,7 @@ module.exports = {
         }],
         'camelcase': [2, { // https://eslint.org/docs/rules/camelcase
             'properties': 'always',
+            'ignoreDestructuring': false,
         }],
         'capitalized-comments': 0, // we don't think this is a serious problem.
         'comma-dangle': [0, 'never'], // XXX: This rule set does not think about IE8.

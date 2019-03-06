@@ -10,7 +10,8 @@ module.exports = {
     ],
 
     'rules': {
-        // TODO: @typescript-eslint/adjacent-overload-signatures
+        // Basically, it's nice to uniform the order of overload signatures.
+        '@typescript-eslint/adjacent-overload-signatures': 'warn',
 
         // TypeScript allows both forms of `[]` and `Array<T>`.
         // But typescript compiler also supports `ReadonlyArray<T>` builtin type and others.
@@ -24,7 +25,12 @@ module.exports = {
         // It will not be too much warn about it.
         '@typescript-eslint/ban-ts-ignore': 'error',
 
-        // TODO: @typescript-eslint/camelcase
+        // This should be sorted with ESLint builtin rule.
+        'camelcase': 'off',
+        '@typescript-eslint/camelcase': ['error', {
+            'properties': 'always',
+            'ignoreDestructuring': false,
+        }],
 
         // A class & interface should be PascalCased
         '@typescript-eslint/class-name-casing': 'error',
