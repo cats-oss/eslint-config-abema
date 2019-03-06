@@ -24,7 +24,12 @@ module.exports = {
         // It will not be too much warn about it.
         '@typescript-eslint/ban-ts-ignore': 'error',
 
-        // TODO: @typescript-eslint/camelcase
+        // This should be sorted with ESLint builtin rule.
+        'camelcase': 'off',
+        '@typescript-eslint/camelcase': ['error', {
+            'properties': 'always',
+            'ignoreDestructuring': false,
+        }],
 
         // A class & interface should be PascalCased
         '@typescript-eslint/class-name-casing': 'error',
