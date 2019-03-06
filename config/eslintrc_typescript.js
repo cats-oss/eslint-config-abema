@@ -67,7 +67,9 @@ module.exports = {
         '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
 
         // TODO: @typescript-eslint/no-array-constructor
-        // TODO: @typescript-eslint/no-empty-interface
+
+        // It works as a marker that to implement some interfaces.
+        '@typescript-eslint/no-empty-interface': 'off',
 
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-explicit-any': 'warn',
