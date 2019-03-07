@@ -148,9 +148,12 @@ module.exports = {
         // TODO: @typescript-eslint/no-unnecessary-qualifier
         // TODO: @typescript-eslint/no-unnecessary-type-assertion
 
-        // the default `no-unused-vars` is not support type annotations.
+        // This should be sorted with ESLint builtin rule.
+        //
+        // If your project only has TypeScript or you run ESLint for TypeScript separately from for JavaScript,
+        // and if you use typescript compiler with `noUnused***` options,
+        // then you can disable this.
         'no-unused-vars': 'off',
-        // Sort values with `no-unused-vars` provided by core.
         '@typescript-eslint/no-unused-vars': ['warn', {
             'vars': 'all',
             'args': 'after-used',
