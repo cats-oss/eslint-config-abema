@@ -42,7 +42,14 @@ module.exports = {
 
         // TODO: @typescript-eslint/generic-type-naming
         // TODO: @typescript-eslint/indent
-        // TODO: @typescript-eslint/interface-name-prefix
+
+        // [By TypeScript coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines),
+        // This rule is banned.
+        //
+        // > Do not use "I" as a prefix for interface names.
+        //
+        // We follow this.
+        '@typescript-eslint/interface-name-prefix': ['error', 'never'],
 
         // Sort with the preferred style (`;`) in TypeScript world.
         '@typescript-eslint/member-delimiter-style': ['warn', {
