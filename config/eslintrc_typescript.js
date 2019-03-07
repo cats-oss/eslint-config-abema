@@ -157,7 +157,9 @@ module.exports = {
         '@typescript-eslint/no-type-alias': 'off',
 
         // TODO: @typescript-eslint/no-unnecessary-qualifier
-        // TODO: @typescript-eslint/no-unnecessary-type-assertion
+
+        // We allow this this kind of redundant code because it sometimes prevents a mistake.
+        '@typescript-eslint/no-unnecessary-type-assertion': 'off',
 
         // This should be sorted with ESLint builtin rule.
         //
