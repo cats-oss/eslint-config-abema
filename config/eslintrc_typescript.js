@@ -206,7 +206,9 @@ module.exports = {
         // For the future, we might be enable this. But this moment is not so.
         '@typescript-eslint/promise-function-async': 'off',
 
-        // TODO: @typescript-eslint/restrict-plus-operands
+        // This detects a common mistake which uses `+` for diffrent types.
+        '@typescript-eslint/restrict-plus-operands': 'warn',
+
         // TODO: @typescript-eslint/type-annotation-spacing
     }
 };

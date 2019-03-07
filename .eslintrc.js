@@ -1,7 +1,11 @@
 // XXX: To uniform the style of an object literals, we enable `quote-props`
 /*eslint quote-props: [2, "always"] no-magic-numbers: 0 */
+/* eslint-env node */
 
 'use strict';
+
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const path = require('path');
 
 /**
  *  Test ourself :)
@@ -25,6 +29,7 @@ module.exports = {
     'parserOptions': {
         'ecmaVersion': 2018,
         'sourceType': 'script',
+        'project': path.resolve(__dirname, './tsconfig.json'),
     },
 
     'plugins': [
