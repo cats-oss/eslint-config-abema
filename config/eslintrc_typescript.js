@@ -187,7 +187,22 @@ module.exports = {
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
 
-        // TODO: @typescript-eslint/promise-function-async
+        // Of course, It looks nice for styling to sort them
+        // to async function that all functions returning `Promise`.
+        // However, we hesitate to say some policy about it by these reasons
+        // and we stay disable this rule.
+        //
+        //  1. We don't have much data about the performance impact of
+        //     "async function vs returning `Promise`".
+        //  2. In almost case, it bloats the result code size by down-level transform for async function.
+        //     even if it simply return the value wrapped in `Promise` and without any `await` clause.
+        //     if is not always nice to use `async function()`.
+        //  3. We can annotate the type of returned value and we also checking types statically,
+        //     thus we don't have strong motivation to use `async function ()` syntax as signature.
+        //
+        // For the future, we might be enable this. But this moment is not so.
+        '@typescript-eslint/promise-function-async': 'off',
+
         // TODO: @typescript-eslint/restrict-plus-operands
         // TODO: @typescript-eslint/type-annotation-spacing
     }
