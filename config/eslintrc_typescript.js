@@ -40,11 +40,7 @@ module.exports = {
         // It's redundant to enforce to supply `public`.
         '@typescript-eslint/explicit-member-accessibility': 'off',
 
-        // If we enable this, this setting only allow either `T` form or `TKey` form.
-        // In our internal codebase, however, enabling this rule increases the time to lint.
-        // We recommend to disable this rule if you'd like to decrease the time to lint.
-        '@typescript-eslint/generic-type-naming': ['error', '^([A-Z]|[A-Z][a-zA-Z]+)$'],
-
+        // TODO: @typescript-eslint/generic-type-naming
         // TODO: @typescript-eslint/indent
 
         // [By TypeScript coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines),
