@@ -226,5 +226,8 @@ module.exports = {
         '@typescript-eslint/restrict-plus-operands': 'warn',
 
         // TODO: @typescript-eslint/type-annotation-spacing
+
+        // In some case, function definition by overloading improves IntelliSense ergonomics.
+        '@typescript-eslint/unified-signature': 'off',
     }
 };
