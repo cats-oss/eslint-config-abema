@@ -423,6 +423,12 @@ module.exports = {
             'destructuring': 'any', // Let's use `const` if we make one of variables `const`.
         }],
         'prefer-destructuring': 0, // It's not always true that to prefer destructuring.
+
+        // After ECMAScript 2018, this feature improves code readability.
+        // But we need to investigate the perf impact if we recommend to named capture group.
+        // Until then, we disable this rule.
+        'prefer-named-capture-group': 'off',
+
         'prefer-numeric-literals': 2, // https://eslint.org/docs/rules/prefer-numeric-literals
         'prefer-rest-params': 1, // Recommend to use rest parameter instead of `arguments`.
         'prefer-spread': 1, // Recommend to use spread operator instead of `Function.prototype.apply`.
