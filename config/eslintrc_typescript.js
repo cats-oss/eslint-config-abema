@@ -103,7 +103,13 @@ module.exports = {
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-explicit-any': 'warn',
 
-        // TODO: (#63) @typescript-eslint/no-extraneous-class
+        '@typescript-eslint/no-extraneous-class': ['warn', {
+            'allowConstructorOnly': true,
+            'allowEmpty': true,
+            // If there is the class which only have static members,
+            // then we have a chance to refactoring them to simple module level variables.
+            'allowStaticOnly': false,
+        }],
 
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
