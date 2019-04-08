@@ -43,7 +43,7 @@ module.exports = {
         // If we enable this, this setting only allow either `T` form or `TKey` form.
         // In our internal codebase, however, enabling this rule increases the time to lint.
         // We recommend to disable this rule if you'd like to decrease the time to lint.
-        '@typescript-eslint/generic-type-naming': ['error', '(^[A-Z]\\d?$|^T[a-zA-Z]+\\d?$)'],
+        '@typescript-eslint/generic-type-naming': ['error', '(^[A-Z]\\d?$|^T[A-Z][a-zA-Z]+\\d?$)'],
 
         // TODO: @typescript-eslint/indent
 
