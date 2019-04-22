@@ -204,6 +204,18 @@ module.exports = {
         // know what they are doing.
         '@typescript-eslint/prefer-function-type': 'error',
 
+        // Today, in almost case, we would develop our application with ES2016~ polyfills
+        // and it's rare case to develop an app without ~ES2016 polyfills.
+        // So I think we should enable this rule.
+        // If your application cannot load any polyfills or have any perf issues,
+        // let's disable this.
+        // By the implementation of this rule in v1.7, this rule detects if the object fulfills:
+        //
+        //  * Has `indexOf()` property.
+        //  * Has `includes()` property.
+        //  * They has same signatures.
+        '@typescript-eslint/prefer-includes': 'warn',
+
         // Each style has its own pros & cons.
         '@typescript-eslint/prefer-interface': 'off',
 
