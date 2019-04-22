@@ -60,7 +60,9 @@ const possibleErrors = {
     }],
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md
-    'import/no-useless-path-segments': 'error',
+    'import/no-useless-path-segments': ['error', {
+        'noUselessIndex': false,
+    }],
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
     'import/no-webpack-loader-syntax': 'error',
