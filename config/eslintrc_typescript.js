@@ -41,7 +41,13 @@ module.exports = {
         // TODO: (#64) @typescript-eslint/explicit-function-return-type
 
         // It's redundant to enforce to supply `public`.
-        '@typescript-eslint/explicit-member-accessibility': 'off',
+        '@typescript-eslint/explicit-member-accessibility': ['warn', {
+            'accessibility': 'no-public',
+            'overrides': {
+                // Fro parameter properties, all items should be explicited.
+                'parameterProperties': 'explicit',
+            },
+        }],
 
         // If we enable this, this setting only allow either `T` form or `TKey` form.
         // In our internal codebase, however, enabling this rule increases the time to lint.
