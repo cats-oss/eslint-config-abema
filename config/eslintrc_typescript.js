@@ -204,11 +204,43 @@ module.exports = {
         // know what they are doing.
         '@typescript-eslint/prefer-function-type': 'error',
 
+        // Today, in almost case, we don't have to write `for` loop because native implementations which supports
+        // iterator protocols or you might use some down-level transformers. So I think we should enable this rule.
+        //
+        // If your application cannot use any down-level transformers or if you face to some perf issue,
+        // let's disable this.
+        // If you would like to ban `for-of` loop by that the transformed code is large,
+        // then it might be more better to ban `for-of` syntax.
+        //
+        // TODO(#97):
+        // However, by the implementation of this rule v1.7,
+        // this mis-reports the error even if the collection in for loop does not have Symbol.iterator().
+        '@typescript-eslint/prefer-for-of': 'off',
+
+        // Today, in almost case, we would develop our application with ES2016~ polyfills
+        // and it's rare case to develop an app without ~ES2016 polyfills.
+        // So I think we should enable this rule.
+        // If your application cannot load any polyfills or have any perf issues,
+        // let's disable this.
+        // By the implementation of this rule in v1.7, this rule detects if the object fulfills:
+        //
+        //  * Has `indexOf()` property.
+        //  * Has `includes()` property.
+        //  * They has same signatures.
+        '@typescript-eslint/prefer-includes': 'warn',
+
         // Each style has its own pros & cons.
         '@typescript-eslint/prefer-interface': 'off',
 
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
+
+        // Today, in almost case, we would develop our application with ES2015~ polyfills
+        // and it's rare case to develop an app without ~ES2015 polyfills.
+        // So I think we should enable this rule.
+        // If your application cannot load any polyfills or have any perf issues,
+        // let's disable this.
+        '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
 
         // Of course, It looks nice for styling to sort them
         // to async function that all functions returning `Promise`.
@@ -230,6 +262,12 @@ module.exports = {
         '@typescript-eslint/restrict-plus-operands': 'warn',
 
         // TODO: @typescript-eslint/type-annotation-spacing
+
+        // This detects a simple error.
+        '@typescript-eslint/unbound-method': ['error', {
+            // static method should not depends on any instance.
+            'ignoreStatic': true,
+        }],
 
         // In some case, function definition by overloading improves IntelliSense ergonomics.
         '@typescript-eslint/unified-signature': 'off',
