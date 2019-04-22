@@ -18,6 +18,9 @@ module.exports = {
         // So I seem it's nice to sort with `Array<T>` to decrease impedance mismatch.
         '@typescript-eslint/array-type': ['warn', 'generic'],
 
+        // If you don't have use `await`, then it should be removed to reduce internal works.
+        '@typescript-eslint/await-thenable': 'warn',
+
         // We cannot define this. User project should enable this.
         '@typescript-eslint/ban-types': 'off',
 
