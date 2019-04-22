@@ -204,6 +204,15 @@ module.exports = {
         // know what they are doing.
         '@typescript-eslint/prefer-function-type': 'error',
 
+        // Today, in almost case, we don't have to write `for` loop because native implementations which supports
+        // iterator protocols or you might use some down-level transformers. So I think we should enable this rule.
+        //
+        // If your application cannot use any down-level transformers or if you face to some perf issue,
+        // let's disable this.
+        // If you would like to ban `for-of` loop by that the transformed code is large,
+        // then it might be more better to ban `for-of` syntax.
+        '@typescript-eslint/prefer-for-of': 'warn',
+
         // Today, in almost case, we would develop our application with ES2016~ polyfills
         // and it's rare case to develop an app without ~ES2016 polyfills.
         // So I think we should enable this rule.
