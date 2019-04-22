@@ -263,6 +263,12 @@ module.exports = {
 
         // TODO: @typescript-eslint/type-annotation-spacing
 
+        // This detects a simple error.
+        '@typescript-eslint/unbound-method': ['error', {
+            // static method should not depends on any instance.
+            'ignoreStatic': true,
+        }],
+
         // In some case, function definition by overloading improves IntelliSense ergonomics.
         '@typescript-eslint/unified-signature': 'off',
     }
