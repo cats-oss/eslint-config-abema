@@ -211,7 +211,11 @@ module.exports = {
         // let's disable this.
         // If you would like to ban `for-of` loop by that the transformed code is large,
         // then it might be more better to ban `for-of` syntax.
-        '@typescript-eslint/prefer-for-of': 'warn',
+        //
+        // TODO(#97):
+        // However, by the implementation of this rule v1.7,
+        // this mis-reports the error even if the collection in for loop does not have Symbol.iterator().
+        '@typescript-eslint/prefer-for-of': 'off',
 
         // Today, in almost case, we would develop our application with ES2016~ polyfills
         // and it's rare case to develop an app without ~ES2016 polyfills.
