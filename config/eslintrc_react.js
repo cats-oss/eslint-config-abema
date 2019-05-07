@@ -101,6 +101,10 @@ module.exports = {
         // A _state_ usually depends on some value hold by its instance.
         // So it's more reasonable way to init in the constructor.
         'react/state-in-constructor': ['error', 'always'],
+        // I seem this might be a problematic only for class component,
+        // But we lives in the era of hooks and almost properties which is targeted by this rule
+        // are classic (non-recommended in today) ones.
+        'react/static-property-placement': 'off',
         'react/void-dom-elements-no-children': 1,
 
         // We define customized rules because we thought default settings mixes with
