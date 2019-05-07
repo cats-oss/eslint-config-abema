@@ -64,7 +64,9 @@ module.exports = {
         'react/no-render-return-value': 2,
         'react/no-redundant-should-component-update': 1,
         'react/no-set-state': 0,
-        'react/no-string-refs': 2,
+        'react/no-string-refs': [2, {
+            'noTemplateLiterals': true,
+        }],
         'react/no-this-in-sfc': 1,
         'react/no-typos': 0,
         'react/no-unescaped-entities': 2,
