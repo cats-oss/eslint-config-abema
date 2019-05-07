@@ -151,6 +151,7 @@ module.exports = {
         'react/jsx-max-depth': 0, // We should not restrict this by default.
         'react/jsx-max-props-per-line': 0, // we don't think this is serious problem.
         'react/jsx-no-bind': [2, { // Sort to bind with this in constructor.
+            'ignoreDOMComponents': true,
             'ignoreRefs': true, // we may use `refs`.
             'allowArrowFunctions': false,
             'allowBind': false,
@@ -174,6 +175,8 @@ module.exports = {
             // but the current rule impl. is pretty buggy and noisey. It's better to disable it.
             'children': 'ignore',
         }],
+        // I seem this is too strict.
+        'react/jsx-one-expression-per-line': 'off',
         'react/jsx-pascal-case': [2, {
             'allowAllCaps': false,
             'ignore': [],
