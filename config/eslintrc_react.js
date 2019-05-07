@@ -96,6 +96,9 @@ module.exports = {
             'component': true,
             'html': false,
         }],
+        // A _state_ usually depends on some value hold by its instance.
+        // So it's more reasonable way to init in the constructor.
+        'react/state-in-constructor': ['error', 'always'],
         'react/void-dom-elements-no-children': 1,
 
         // We define customized rules because we thought default settings mixes with
