@@ -193,6 +193,12 @@ module.exports = {
             'allowAllCaps': false,
             'ignore': [],
         }],
+        // This is good for maintainability by avoiding passing unintentional extra props.
+        'react/jsx-props-no-spreading': ['error', {
+            'html': 'enforce',
+            'custom': 'enforce',
+            'exceptions': [],
+        }],
         'react/jsx-sort-default-props': 0,
         'react/jsx-sort-props': 0, // we cannot force alphabetical order to our old codebase, and this is meaningless.
         'react/jsx-props-no-multi-spaces': 1,
