@@ -174,6 +174,8 @@ module.exports = {
             // but the current rule impl. is pretty buggy and noisey. It's better to disable it.
             'children': 'ignore',
         }],
+        // I seem this is too strict.
+        'react/jsx-one-expression-per-line': 'off',
         'react/jsx-pascal-case': [2, {
             'allowAllCaps': false,
             'ignore': [],
