@@ -64,7 +64,9 @@ module.exports = {
         'react/no-render-return-value': 2,
         'react/no-redundant-should-component-update': 1,
         'react/no-set-state': 0,
-        'react/no-string-refs': 2,
+        'react/no-string-refs': [2, {
+            'noTemplateLiterals': true,
+        }],
         'react/no-this-in-sfc': 1,
         'react/no-typos': 0,
         'react/no-unescaped-entities': 2,
@@ -78,6 +80,8 @@ module.exports = {
         // We don't think this code is produced in a  common case. If you need it, let's opt out/
         'react/no-will-update-set-state': 2,
         'react/prefer-es6-class': 2,
+        // At v7.13, this only supports Flowtype.
+        'react/prefer-read-only-props': 'off',
         'react/prefer-stateless-function': [1, {
             'ignorePureComponents': true,
         }],
@@ -94,6 +98,13 @@ module.exports = {
             'component': true,
             'html': false,
         }],
+        // A _state_ usually depends on some value hold by its instance.
+        // So it's more reasonable way to init in the constructor.
+        'react/state-in-constructor': ['error', 'always'],
+        // I seem this might be a problematic only for class component,
+        // But we lives in the era of hooks and almost properties which is targeted by this rule
+        // are classic (non-recommended in today) ones.
+        'react/static-property-placement': 'off',
         'react/void-dom-elements-no-children': 1,
 
         // We define customized rules because we thought default settings mixes with
@@ -185,6 +196,12 @@ module.exports = {
         'react/jsx-pascal-case': [2, {
             'allowAllCaps': false,
             'ignore': [],
+        }],
+        // This is good for maintainability by avoiding passing unintentional extra props.
+        'react/jsx-props-no-spreading': ['error', {
+            'html': 'enforce',
+            'custom': 'enforce',
+            'exceptions': [],
         }],
         'react/jsx-sort-default-props': 0,
         'react/jsx-sort-props': 0, // we cannot force alphabetical order to our old codebase, and this is meaningless.
