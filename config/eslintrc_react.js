@@ -141,6 +141,7 @@ module.exports = {
             'extensions': ['.jsx']
         }],
         'react/jsx-first-prop-new-line': 0, // This is just stylistic issue.
+        'react/jsx-fragments': 'off', // I don't think enforce the style for this.
         'react/jsx-handler-names': [2, {
             'eventHandlerPrefix': 'on', // There is no event handler which is diffrent from this rules (`onBarFoo`).
             'eventHandlerPropPrefix': 'on',
