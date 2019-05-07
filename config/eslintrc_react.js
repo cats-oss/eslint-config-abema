@@ -145,7 +145,11 @@ module.exports = {
             'eventHandlerPrefix': 'on', // There is no event handler which is diffrent from this rules (`onBarFoo`).
             'eventHandlerPropPrefix': 'on',
         }],
-        'react/jsx-indent': [1, 4], // Sort with core's `indent` rule.
+        // Sort with core's `indent` rule.
+        'react/jsx-indent': [1, 4, {
+            'checkAttributes': false,
+            'indentLogicalExpressions': false,
+        }],
         'react/jsx-indent-props': 0, // we cannot force alphabetical order to our old codebase, and this is not any serious problem.
         'react/jsx-key': 1,
         'react/jsx-max-depth': 0, // We should not restrict this by default.
