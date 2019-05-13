@@ -244,6 +244,18 @@ module.exports = {
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
 
+        // * We enable this rule to sorting the style in your project.
+        // * I'm not sure about that this rule document says as the reason that `RegExp.prototype.exec()` is faster than
+        //  `String.prototype.match()`. We need to invetigate it as future work. See #117.
+        // * This rule might not cover the case that fulfills these conditions:
+        //      1.  `somestring.match(regexp)` and this `regexp` is a simple arguments which is annotated with `RegExp`
+        //          of function _A_.
+        //      2.  function _A_ would be take both of a regular expression with `g` flag and one without `g` flag.
+        //   But I think that such case has some potential bugs
+        //   because `String.prototype.match()` works in a different wary by supplying `g` flag.
+        // We should elminate such code.
+        '@typescript-eslint/prefer-regexp-exec': 'warn',
+
         // Today, in almost case, we would develop our application with ES2015~ polyfills
         // and it's rare case to develop an app without ~ES2015 polyfills.
         // So I think we should enable this rule.
