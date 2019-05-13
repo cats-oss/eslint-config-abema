@@ -44,13 +44,13 @@ module.exports = {
     'extends': [
         // for eslint's builtin rules.
         'eslint-config-abema/config/eslintrc_core.js',
-        
+
         // for eslint-plugin-import
         'eslint-config-abema/config/eslintrc_import.js',
-        
+
         // for eslint-plugin-node
         'eslint-config-abema/config/eslintrc_node.js',
-        
+
         // for eslint-plugin-react
         'eslint-config-abema/config/eslintrc_react.js',
 
