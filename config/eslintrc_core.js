@@ -116,7 +116,7 @@ module.exports = {
             'props': true
         }],
         'no-proto': 2,
-        'no-redeclare': 2,
+        'no-redeclare': ['error', { 'builtinGlobals': true }],
         'no-restricted-properties': 0, // https://eslint.org/docs/rules/no-restricted-properties
         'no-return-assign': 2, // This is a problem for readability.
         'no-return-await': 1, // Warn. Because this is not a serious problem which is same degree with `no-return-assign`.
