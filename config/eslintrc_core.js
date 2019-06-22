@@ -55,7 +55,7 @@ module.exports = {
         // So we regard this rule as meaningless actually and disable this.
         'require-atomic-updates ': 0, // https://eslint.org/docs/rules/require-atomic-updates
         'use-isnan': 2, // Use `Number.isNaN`
-        'valid-typeof': [1, {'requireStringLiterals': true}],
+        'valid-typeof': [1, { 'requireStringLiterals': true }],
 
         // Best Practices
         'accessor-pairs': 0, // Allow only getter or setter to define a "read-only" or "write-only" object
@@ -180,7 +180,7 @@ module.exports = {
         'init-declarations': 'off',
         'no-delete-var': 2, // In a general case, we don't have to do this.
         'no-label-var': 2,
-        'no-restricted-globals' : [2, // https://eslint.org/docs/rules/no-restricted-globals
+        'no-restricted-globals': [2, // https://eslint.org/docs/rules/no-restricted-globals
             'name', 'top', 'event'
         ],
         'no-shadow': 0,
@@ -256,6 +256,8 @@ module.exports = {
             // but it would be good to allow both forms of declaration/expression.
             'allowArrowFunctions': true,
         }],
+        // Strictly, this should be handled by the formatter.
+        'function-paren-newline': ['error', 'multiline'],
         'id-blacklist': 0, // https://eslint.org/docs/rules/id-blacklist
         'id-length': 0, // https://eslint.org/docs/rules/id-length
         'id-match': 0, // https://eslint.org/docs/rules/id-match
@@ -333,7 +335,7 @@ module.exports = {
         'nonblock-statement-body-position': 0, // https://eslint.org/docs/rules/nonblock-statement-body-position
         'object-curly-newline': 0, // Just case by case! https://eslint.org/docs/rules/object-curly-newline
         'object-curly-spacing': 0, // https://eslint.org/docs/rules/object-curly-spacing
-        'object-property-newline' : 0, // Disable to allow many properties into single line.
+        'object-property-newline': 0, // Disable to allow many properties into single line.
         'one-var': [2, 'never'], // https://eslint.org/docs/rules/one-var
         'one-var-declaration-per-line': 1, // https://eslint.org/docs/rules/one-var-declaration-per-line
         'operator-assignment': 0, // Unlike `i++` or `++i`, this is not a problem
@@ -360,7 +362,7 @@ module.exports = {
         }],
         'quote-props': 0, // `bar-foo` without quote will be parse error if we disable this rules.
         'semi': [2, 'always'], // Enfoce semicolon.
-        'semi-spacing':[2, { // Ban a space char before semicolon.
+        'semi-spacing': [2, { // Ban a space char before semicolon.
             'before': false,
             'after': true
         }],
