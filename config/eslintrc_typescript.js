@@ -113,6 +113,11 @@ module.exports = {
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
 
+        // This should be sorted with ESLint builtin rule.
+        // Allow to set a no-op function.
+        'no-empty-function': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+
         // It works as a marker that to implement some interfaces.
         '@typescript-eslint/no-empty-interface': 'off',
 
