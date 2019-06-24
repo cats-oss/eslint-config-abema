@@ -256,8 +256,8 @@ module.exports = {
             // but it would be good to allow both forms of declaration/expression.
             'allowArrowFunctions': true,
         }],
-        // Strictly, this should be handled by the formatter.
-        'function-paren-newline': ['error', 'multiline'],
+        // This should be handled by the formatter.
+        'function-paren-newline': 'off',
         'id-blacklist': 0, // https://eslint.org/docs/rules/id-blacklist
         'id-length': 0, // https://eslint.org/docs/rules/id-length
         'id-match': 0, // https://eslint.org/docs/rules/id-match
