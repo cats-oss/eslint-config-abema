@@ -1,5 +1,5 @@
 // XXX: To uniform the style of an object literals, we enable `quote-props`
-/*eslint-enable quote-props: [2, "always"], no-magic-numbers: 0 */
+/*eslint quote-props: ['error', 'always'], no-magic-numbers: 0 */
 
 'use strict';
 
@@ -9,7 +9,7 @@
  *  or by chaning Node.js ES Module support.
  */
 
-/* eslint-enable sort-keys: 'error' */
+/* eslint sort-keys: 'error' */
 const possibleErrors = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
     'import/default': 'error',
@@ -136,13 +136,15 @@ const styleguide = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md
     // default export is hard to find a usage of symbols.
     'import/no-default-export': 'error',
-    'import/no-named-export': 'off', // This is inverse of `no-default-export`.
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
     'import/no-duplicates': 'warn',
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
     'import/no-named-default': 'off',
+
+    // This is inverse of `no-default-export`.
+    'import/no-named-export': 'off',
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
     'import/no-namespace': 'off',
