@@ -38,6 +38,9 @@ module.exports = {
         // A class & interface should be PascalCased
         '@typescript-eslint/class-name-casing': 'error',
 
+        // Each style has its own pros & cons.
+        '@typescript-eslint/consistent-type-definitions': 'off',
+
         // TODO: (#64) @typescript-eslint/explicit-function-return-type
 
         // It's redundant to enforce to supply `public`.
@@ -237,9 +240,6 @@ module.exports = {
         //  * Has `includes()` property.
         //  * They has same signatures.
         '@typescript-eslint/prefer-includes': 'warn',
-
-        // Each style has its own pros & cons.
-        '@typescript-eslint/prefer-interface': 'off',
 
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
