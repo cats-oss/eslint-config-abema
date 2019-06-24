@@ -122,7 +122,10 @@ module.exports = {
         '@typescript-eslint/no-empty-interface': 'off',
 
         // Please opt-out this rule if you don't have any workarounds.
-        '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/no-explicit-any': ['warn', {
+            // Even if rest arguments, we should mark them explicitly.
+            'ignoreRestArgs': false,
+        }],
 
         '@typescript-eslint/no-extraneous-class': ['warn', {
             'allowConstructorOnly': true,
