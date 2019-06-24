@@ -38,6 +38,9 @@ module.exports = {
         // A class & interface should be PascalCased
         '@typescript-eslint/class-name-casing': 'error',
 
+        // Each style has its own pros & cons.
+        '@typescript-eslint/consistent-type-definitions': 'off',
+
         // TODO: (#64) @typescript-eslint/explicit-function-return-type
 
         // It's redundant to enforce to supply `public`.
@@ -110,11 +113,19 @@ module.exports = {
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
 
+        // This should be sorted with ESLint builtin rule.
+        // Allow to set a no-op function.
+        'no-empty-function': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+
         // It works as a marker that to implement some interfaces.
         '@typescript-eslint/no-empty-interface': 'off',
 
         // Please opt-out this rule if you don't have any workarounds.
-        '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/no-explicit-any': ['warn', {
+            // Even if rest arguments, we should mark them explicitly.
+            'ignoreRestArgs': false,
+        }],
 
         '@typescript-eslint/no-extraneous-class': ['warn', {
             'allowConstructorOnly': true,
@@ -123,6 +134,13 @@ module.exports = {
             // then we have a chance to refactoring them to simple module level variables.
             'allowStaticOnly': false,
         }],
+
+        // At v1.11, This rule cannot handle the pattern like try-finally.
+        // But I feel this is useful to handle rejected promise correctly.
+        //
+        // Of course, this might be redundant if you set unhandledrejection event handler.
+        // We still have some points which should be under discussion. See: #135
+        '@typescript-eslint/no-floating-promises': 'warn',
 
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
@@ -237,9 +255,6 @@ module.exports = {
         //  * Has `includes()` property.
         //  * They has same signatures.
         '@typescript-eslint/prefer-includes': 'warn',
-
-        // Each style has its own pros & cons.
-        '@typescript-eslint/prefer-interface': 'off',
 
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
