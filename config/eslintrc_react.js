@@ -146,6 +146,8 @@ module.exports = {
         'react/jsx-child-element-spacing': 0,
         'react/jsx-closing-bracket-location': 0, // It doesn’t matter.
         'react/jsx-closing-tag-location': 1,
+        // This is a formatter problem.
+        'react/jsx-curly-newline': 'off',
         'react/jsx-curly-spacing': [1, { 'children': true }],
         'react/jsx-equals-spacing': [1, 'never'],
         'react/jsx-filename-extension': [2, {
