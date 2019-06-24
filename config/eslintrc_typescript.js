@@ -132,6 +132,13 @@ module.exports = {
             'allowStaticOnly': false,
         }],
 
+        // At v1.11, This rule cannot handle the pattern like try-finally.
+        // But I feel this is useful to handle rejected promise correctly.
+        //
+        // Of course, this might be redundant if you set unhandledrejection event handler.
+        // We still have some points which should be under discussion. See: #135
+        '@typescript-eslint/no-floating-promises': 'warn',
+
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
 
