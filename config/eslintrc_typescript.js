@@ -279,6 +279,13 @@ module.exports = {
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
 
+        // This rule is nice for refactoring, but I suspect to enable this at all time.
+        // This only covers `private` property and I don't think that it's pretty useful
+        // to warn private properties' unnecessary mutability.
+        // I suspect it's noisy. Their properties is closed
+        // and their mutability would not be a complex problem in almost case.
+        '@typescript-eslint/prefer-readonly': 'off',
+
         // * We enable this rule to sorting the style in your project.
         // * I'm not sure about that this rule document says as the reason that `RegExp.prototype.exec()` is faster than
         //  `String.prototype.match()`. We need to invetigate it as future work. See #117.
