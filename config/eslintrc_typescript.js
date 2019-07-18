@@ -291,6 +291,11 @@ module.exports = {
         // This detects a common mistake which uses `+` for diffrent types.
         '@typescript-eslint/restrict-plus-operands': 'warn',
 
+        // At v1.12, this rule does not support the idion to convert to boolean value from other type one
+        // like `!!<some non boolean value>`. So we disable this until fixing it.
+        // FIXME: #152
+        '@typescript-eslint/strict-boolean-expressions': 'off',
+
         // Basically, use ES Module import. // <reference path="" /> is just special case.
         '@typescript-eslint/triple-slash-reference': ['error', {
             'path': 'never',
