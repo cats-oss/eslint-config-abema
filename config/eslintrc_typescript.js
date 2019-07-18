@@ -307,7 +307,17 @@ module.exports = {
             'lib': 'never',
         }],
 
-        // TODO: @typescript-eslint/type-annotation-spacing
+        // This rule might be worse for the lint runtime performance.
+        '@typescript-eslint/type-annotation-spacing': ['warn', {
+            'before': false,
+            'after': true,
+            'overrides': {
+                'arrow': {
+                    'before': true,
+                    'after': true,
+                },
+            },
+        }],
 
         // In some case, function definition by overloading improves IntelliSense ergonomics.
         '@typescript-eslint/unified-signature': 'off',
