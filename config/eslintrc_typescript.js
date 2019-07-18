@@ -135,6 +135,10 @@ module.exports = {
             'allowStaticOnly': false,
         }],
 
+        // This should be sorted with ESLint builtin rule.
+        'no-extra-parens': 'off',
+        '@typescript-eslint/no-extra-parens': 'off',
+
         // Of course, this might be redundant if you set unhandledrejection event handler.
         // We still have some points which should be under discussion. See: #135
         '@typescript-eslint/no-floating-promises': 'warn',
