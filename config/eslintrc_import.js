@@ -86,6 +86,17 @@ const helpfulWarnings = {
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
     'import/no-named-as-default-member': 'error',
+
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
+    // This rule is heplful but we sometimes add a new module which is not imported from anywhere
+    // as an experimental new feature.
+    // And if there is multiple same named files to hacky-migrate from js to typescript,
+    // This sometimes does not works correctly.
+    // So we disable this.
+    //
+    // This feature is useful for refactoring/clean up.
+    // Then it might be better to enable this.
+    'import/no-unused-modules': 'off',
 };
 
 const moduleSystems = {
