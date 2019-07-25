@@ -154,6 +154,13 @@ module.exports = {
         // Ban the misused style aggressively
         '@typescript-eslint/no-misused-new': 'error',
 
+        '@typescript-eslint/no-misused-promises': ['warn', {
+            // It's nice to detect the part which we expect to use a boolean value.
+            'checksConditionals': true,
+            // We disable this option to allow `await` for event handler callbacks.
+            'checksVoidReturn': false,
+        }],
+
         // Only allow declarations. Use ES Module in almost projects.
         '@typescript-eslint/no-namespace': ['error', {
             'allowDeclarations': true,
