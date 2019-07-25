@@ -142,7 +142,12 @@ module.exports = {
             'allowEmptyReject': true, // Enable to create empty rejected one for compositing promises.
         }],
         'radix': 2, // Enforce 2nd argument of `parseInt()`.
+
+        // I don't think this rule is always useful because `await` is not required for async function.
+        // If you create a function which return `Promise` and would have some async operation for the future,
+        // this rule should be interruption.
         'require-await': 0,
+
         //  * If you write a code for an environment which does not support `RegExp`'s `u` flag (it would be legacy environment)
         //    without any down-level code transformer, it might be better to disable this rule.
         //  * If you supply `u` flag to regular expression, a parser can detect a syntax error of regular expression.

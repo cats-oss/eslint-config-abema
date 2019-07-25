@@ -292,6 +292,10 @@ module.exports = {
         // For the future, we might be enable this. But this moment is not so.
         '@typescript-eslint/promise-function-async': 'off',
 
+        // We should sort with builtin rule.
+        'require-await': 'off',
+        '@typescript-eslint/require-await': 'off',
+
         // This detects a common mistake which uses `+` for diffrent types.
         '@typescript-eslint/restrict-plus-operands': 'warn',
 
