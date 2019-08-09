@@ -1,0 +1,11 @@
+on: pull_request_review
+name: assign_review_by_comment by PR review comment
+jobs:
+  assign_review_by_comment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: assign_review_by_comment
+      uses: cats-oss/github-action-auto-assign@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
