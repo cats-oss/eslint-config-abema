@@ -16,7 +16,9 @@ module.exports = {
         // TypeScript allows both forms of `[]` and `Array<T>`.
         // But typescript compiler also supports `ReadonlyArray<T>` builtin type and others.
         // So I seem it's nice to sort with `Array<T>` to decrease impedance mismatch.
-        '@typescript-eslint/array-type': ['warn', 'generic'],
+        '@typescript-eslint/array-type': ['warn', {
+            'default': 'generic',
+        }],
 
         // If you don't have use `await`, then it should be removed to reduce internal works.
         '@typescript-eslint/await-thenable': 'warn',
