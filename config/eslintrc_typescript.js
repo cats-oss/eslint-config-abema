@@ -40,6 +40,15 @@ module.exports = {
         // A class & interface should be PascalCased
         '@typescript-eslint/class-name-casing': 'error',
 
+        // Uniform the style.
+        '@typescript-eslint/consistent-type-assertions': ['warn', {
+            // Sort the style in both of ts and tsx.
+            'assertionStyle': 'as',
+            // `const` assertion is ignored by this rule.
+            // I think it's better to sort the type assertion style.
+            'objectLiteralTypeAssertions': 'never',
+        }],
+
         // Each style has its own pros & cons.
         '@typescript-eslint/consistent-type-definitions': 'off',
 
@@ -108,9 +117,6 @@ module.exports = {
             ],
         }],
 
-        // Sort the style in both of ts and tsx.
-        '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
-
         // This should be sorted with ESLint builtin rule.
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
@@ -171,9 +177,6 @@ module.exports = {
 
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-non-null-assertion': 'warn',
-
-        // Uniform the style.
-        '@typescript-eslint/no-object-literal-type-assertion': 'warn',
 
         // This TypeScript syntax is useful to reduce declarations of class properties.
         // However, we feel this syntax has these negative points:
