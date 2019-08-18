@@ -209,6 +209,9 @@ module.exports = {
         // Try to detect redundant case,
         '@typescript-eslint/no-unnecessary-qualifier': 'warn',
 
+        // It's bad to force to skip to specify.
+        '@typescript-eslint/no-unnecessary-type-arguments': 'off',
+
         // We allow this this kind of redundant code because it sometimes prevents a mistake.
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
 
