@@ -333,6 +333,7 @@ module.exports = {
             'lib': 'never',
         }],
 
+        // TODO: @typescript-eslint/typedef
         // TODO: @typescript-eslint/type-annotation-spacing
 
         // In some case, function definition by overloading improves IntelliSense ergonomics.
