@@ -38,7 +38,10 @@ module.exports = {
         }],
 
         // A class & interface should be PascalCased
-        '@typescript-eslint/class-name-casing': 'error',
+        '@typescript-eslint/class-name-casing': ['error', {
+            // Don't export make it private.
+            'allowUnderscorePrefix': false,
+        }],
 
         // Uniform the style.
         '@typescript-eslint/consistent-type-assertions': ['warn', {
@@ -76,7 +79,11 @@ module.exports = {
         // > Do not use "I" as a prefix for interface names.
         //
         // We follow this.
-        '@typescript-eslint/interface-name-prefix': ['error', 'never'],
+        '@typescript-eslint/interface-name-prefix': ['error', {
+            'prefixWithI': 'never',
+            // Use no-export item to make it private.
+            // 'allowUnderscorePrefix': false,
+        }],
 
         // Sort with the preferred style (`;`) in TypeScript world.
         '@typescript-eslint/member-delimiter-style': ['warn', {
