@@ -24,6 +24,6 @@ module.exports = {
     // (This will not be applied for an user project).
     'parserOptions': {
         'sourceType': 'module',
-        'project': path.resolve(__dirname, '../../tsconfig.json'),
+        'project': path.resolve(__dirname, '../../tsconfig.eslint.json'),
     },
 };

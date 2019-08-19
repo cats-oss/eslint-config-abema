@@ -16,7 +16,9 @@ module.exports = {
         // TypeScript allows both forms of `[]` and `Array<T>`.
         // But typescript compiler also supports `ReadonlyArray<T>` builtin type and others.
         // So I seem it's nice to sort with `Array<T>` to decrease impedance mismatch.
-        '@typescript-eslint/array-type': ['warn', 'generic'],
+        '@typescript-eslint/array-type': ['warn', {
+            'default': 'generic',
+        }],
 
         // If you don't have use `await`, then it should be removed to reduce internal works.
         '@typescript-eslint/await-thenable': 'warn',
@@ -36,7 +38,19 @@ module.exports = {
         }],
 
         // A class & interface should be PascalCased
-        '@typescript-eslint/class-name-casing': 'error',
+        '@typescript-eslint/class-name-casing': ['error', {
+            // Don't export make it private.
+            'allowUnderscorePrefix': false,
+        }],
+
+        // Uniform the style.
+        '@typescript-eslint/consistent-type-assertions': ['warn', {
+            // Sort the style in both of ts and tsx.
+            'assertionStyle': 'as',
+            // `const` assertion is ignored by this rule.
+            // I think it's better to sort the type assertion style.
+            'objectLiteralTypeAssertions': 'never',
+        }],
 
         // Each style has its own pros & cons.
         '@typescript-eslint/consistent-type-definitions': 'off',
@@ -65,7 +79,11 @@ module.exports = {
         // > Do not use "I" as a prefix for interface names.
         //
         // We follow this.
-        '@typescript-eslint/interface-name-prefix': ['error', 'never'],
+        '@typescript-eslint/interface-name-prefix': ['error', {
+            'prefixWithI': 'never',
+            // Use no-export item to make it private.
+            // 'allowUnderscorePrefix': false,
+        }],
 
         // Sort with the preferred style (`;`) in TypeScript world.
         '@typescript-eslint/member-delimiter-style': ['warn', {
@@ -105,9 +123,6 @@ module.exports = {
                 'instance-method',
             ],
         }],
-
-        // Sort the style in both of ts and tsx.
-        '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
 
         // This should be sorted with ESLint builtin rule.
         'no-array-constructor': 'off',
@@ -170,9 +185,6 @@ module.exports = {
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-non-null-assertion': 'warn',
 
-        // Uniform the style.
-        '@typescript-eslint/no-object-literal-type-assertion': 'warn',
-
         // This TypeScript syntax is useful to reduce declarations of class properties.
         // However, we feel this syntax has these negative points:
         //
@@ -196,6 +208,9 @@ module.exports = {
 
         // Try to detect redundant case,
         '@typescript-eslint/no-unnecessary-qualifier': 'warn',
+
+        // It's bad to force to skip to specify.
+        '@typescript-eslint/no-unnecessary-type-arguments': 'off',
 
         // We allow this this kind of redundant code because it sometimes prevents a mistake.
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
@@ -318,6 +333,7 @@ module.exports = {
             'lib': 'never',
         }],
 
+        // TODO: @typescript-eslint/typedef
         // TODO: @typescript-eslint/type-annotation-spacing
 
         // In some case, function definition by overloading improves IntelliSense ergonomics.
