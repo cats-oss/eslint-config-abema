@@ -11,4 +11,4 @@ help:
 
 .PHONY: test
 test: ## Run all tests.
-	yarn run test
+	$(NPM_BIN)/eslint --ext js,md,ts $(CURDIR)/

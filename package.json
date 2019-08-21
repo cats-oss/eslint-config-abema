@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "description": "ESLint configurations that are used by AbemaTV and other projects",
   "license": "MIT",
-  "scripts": {
-    "test": "eslint --ext js,md,ts ./"
-  },
+  "scripts": {},
   "engines": {
     "node": ">6.9.1",
     "npm": ">3.10.3"
