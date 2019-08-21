@@ -262,6 +262,8 @@ module.exports = {
             'allowArrowFunctions': true,
         }],
         // This should be handled by the formatter.
+        'function-call-argument-newline': 'off',
+        // This should be handled by the formatter.
         'function-paren-newline': 'off',
         'id-blacklist': 0, // https://eslint.org/docs/rules/id-blacklist
         'id-length': 0, // https://eslint.org/docs/rules/id-length
