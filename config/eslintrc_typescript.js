@@ -66,10 +66,17 @@ module.exports = {
             },
         }],
 
-        // If we enable this, this setting only allow either `T` form or `TKey` form.
-        // In our internal codebase, however, enabling this rule increases the time to lint.
-        // We recommend to disable this rule if you'd like to decrease the time to lint.
-        '@typescript-eslint/generic-type-naming': ['error', '(^[A-Z]\\d?$|^T[A-Z][a-zA-Z]+\\d?$)'],
+
+        //  * We accept the style for T , TA , TAbc , TA1Bca , T1 , T2.
+        //      * You seem this style is similar to C# or typescript compiler.
+        //      * This choise is for:
+        //          * future readability
+        //          * expressiveness
+        //          * Our target is an application, not library.
+        //          * Automate code review process and avoid the bike-shedding.
+        //  * We don't allow the style for `R`, `K`, `V`, or other forms which we can see in Java or other many languages.
+        //      * It's short but less information.
+        '@typescript-eslint/generic-type-naming': ['error', '^T([A-Z0-9][a-zA-Z0-9]*){0,1}$'],
 
         // TODO: @typescript-eslint/indent
 
