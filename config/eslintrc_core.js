@@ -103,7 +103,7 @@ module.exports = {
         // Thus I mark this as `warn` for redux but I strongly recommend to use default parameter syntax only
         // for parameters which the later ones is also allowed to omit.
         //
-        // If you're annoy for this warning when you use redux, then it's better for you to disable this rule only for them. 
+        // If you're annoy for this warning when you use redux, then it's better for you to disable this rule only for them.
         'default-param-last': 'warn',
 
         'dot-location': 0, // This is just a stylistic issue.
