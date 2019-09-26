@@ -180,6 +180,19 @@ module.exports = {
         // lacks the aspect of type annotation benefits as _documentation_.
         '@typescript-eslint/no-inferrable-types': 'off',
 
+        // This should be sorted with ESLint builtin rule.
+        'no-magic-numbers': 'off',
+        '@typescript-eslint/no-magic-numbers': ['warn', {
+            // Allow these values which are used commonly in test, flags, or others.
+            'ignore': [0, 1],
+
+            // Even if we use magic number, it would not be difficult for type & enum...
+            'ignoreNumericLiteralTypes': true,
+            'ignoreReadonlyClassProperties': false, // there is no difference with the case of normal const var.
+            'ignoreEnums': true,
+
+        }],
+
         // Ban the misused style aggressively
         '@typescript-eslint/no-misused-new': 'error',
 
