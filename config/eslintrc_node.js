@@ -14,6 +14,7 @@ module.exports = {
     /* eslint sort-keys: 'error' */
     'rules': {
         'node/exports-style': [1, 'module.exports'],
+        'node/no-callback-literal': 'off',
         'node/no-deprecated-api': 2, // we'd like to detect the case of using deprecated apis.
         'node/no-exports-assign': 'error', // This simply checks human error.
         'node/no-extraneous-import': 2, // Specify more details in your project.
