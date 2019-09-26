@@ -69,7 +69,43 @@ module.exports = {
         'consistent-return': 2,
         'curly': 2, // It's possible error to allow this.
         'default-case': 0, // This is not a problem.
-        'default-param-last': 'error',
+
+        // Ideally we should make this an error.
+        // However, I seem we have some reasons to relax this rule for daily hackability.
+        //
+        // The 1st argument of redux (at least ~v4) reducer takes `TState | undefined`
+        // and the framework code in redux calls their reducer function with `state=undefined`
+        // to initialize reducers on calling `combineReducers()` even if we pass an initial state on calling `createState()`.
+        //
+        // Thus we sometimes write `(state = createInitialState(), action) => { ... };` conviniently with default parameter
+        // and redux document also use such pattern.
+        // https://github.com/reduxjs/redux/blob/956b0e9e7eb54b8b28994d6990216f8db201823c/src/types/reducers.ts#L5-L32
+        //
+        // Furthermore, We sometimes look similar patterns if we use _reducer_ function by limitations of a framework or library.
+        //
+        // Of course, we can write the above redux code and recommend this form:
+        //
+        // ```javascript
+        //  function reducer(state = createNewState(), action) {
+        //      ...
+        //  }
+        //
+        //  function reudcer(state, action) {
+        //      if (state === undefined) {
+        //          return createNewState();
+        //      }
+        //
+        //      ...
+        //  }
+        // ```
+        //
+        // But I think that it does not make sense that enforcing to rewrite this popular pattern of today's popular framework.
+        // Thus I mark this as `warn` for redux but I strongly recommend to use default parameter syntax only
+        // for parameters which the later ones is also allowed to omit.
+        //
+        // If you're annoy for this warning when you use redux, then it's better for you to disable this rule only for them. 
+        'default-param-last': 'warn',
+
         'dot-location': 0, // This is just a stylistic issue.
         'dot-notation': 2, // We hate reflection by strings. It's possible error.
         'eqeqeq': [2, 'always'], // Don't use loosely equality operator.
