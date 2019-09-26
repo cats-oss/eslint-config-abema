@@ -63,6 +63,7 @@ module.exports = {
         // It's redundant to enforce to supply `public`.
         '@typescript-eslint/explicit-member-accessibility': ['warn', {
             'accessibility': 'no-public',
+            // 'ignoredMethodNames': [],
             'overrides': {
                 // Fro parameter properties, all items should be explicited.
                 'parameterProperties': 'explicit',
