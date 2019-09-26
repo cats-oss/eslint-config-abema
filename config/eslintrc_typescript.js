@@ -329,6 +329,13 @@ module.exports = {
         '@typescript-eslint/promise-function-async': 'off',
 
         // We should sort with builtin rule.
+        'quotes': 'off',
+        '@typescript-eslint/quotes': ['error', 'single', {
+            'avoidEscape': true,
+            'allowTemplateLiterals': true,
+        }],
+
+        // We should sort with builtin rule.
         'require-await': 'off',
         '@typescript-eslint/require-await': 'off',
 
