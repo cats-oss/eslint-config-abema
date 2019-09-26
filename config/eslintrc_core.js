@@ -68,6 +68,7 @@ module.exports = {
         'consistent-return': 2,
         'curly': 2, // It's possible error to allow this.
         'default-case': 0, // This is not a problem.
+        'default-param-last': 'error',
         'dot-location': 0, // This is just a stylistic issue.
         'dot-notation': 2, // We hate reflection by strings. It's possible error.
         'eqeqeq': [2, 'always'], // Don't use loosely equality operator.
