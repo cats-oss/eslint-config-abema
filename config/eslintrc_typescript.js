@@ -30,6 +30,9 @@ module.exports = {
         // It will not be too much warn about it.
         '@typescript-eslint/ban-ts-ignore': 'error',
 
+        // We should sort with builtin rule.
+        '@typescript-eslint/brace-style': 'off',
+
         // This should be sorted with ESLint builtin rule.
         'camelcase': 'off',
         '@typescript-eslint/camelcase': ['error', {
@@ -60,6 +63,7 @@ module.exports = {
         // It's redundant to enforce to supply `public`.
         '@typescript-eslint/explicit-member-accessibility': ['warn', {
             'accessibility': 'no-public',
+            // 'ignoredMethodNames': [],
             'overrides': {
                 // Fro parameter properties, all items should be explicited.
                 'parameterProperties': 'explicit',
@@ -163,7 +167,10 @@ module.exports = {
 
         // Of course, this might be redundant if you set unhandledrejection event handler.
         // We still have some points which should be under discussion. See: #135
-        '@typescript-eslint/no-floating-promises': 'warn',
+        '@typescript-eslint/no-floating-promises': ['warn', {
+            // Promise might reject even if the its returned value is `void`.
+            'ignoreVoid': false,
+        }],
 
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
@@ -327,6 +334,13 @@ module.exports = {
         //
         // For the future, we might be enable this. But this moment is not so.
         '@typescript-eslint/promise-function-async': 'off',
+
+        // We should sort with builtin rule.
+        'quotes': 'off',
+        '@typescript-eslint/quotes': ['error', 'single', {
+            'avoidEscape': true,
+            'allowTemplateLiterals': true,
+        }],
 
         // We should sort with builtin rule.
         'require-await': 'off',
