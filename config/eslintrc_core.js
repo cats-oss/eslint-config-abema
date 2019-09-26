@@ -289,7 +289,9 @@ module.exports = {
                 'ObjectPattern': false,
             },
         }],
-        'computed-property-spacing': [2, 'never'],
+        'computed-property-spacing': [2, 'never', {
+            'enforceForClassMembers': true,
+        }],
         'consistent-this': [2, 'that'],
         'eol-last': [0, 'always'], // we don't have to restrict this. Use EditorConfig.
         'func-call-spacing': 2,
