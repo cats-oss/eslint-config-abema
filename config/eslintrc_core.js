@@ -33,6 +33,7 @@ module.exports = {
         }],
         'no-extra-semi': 1,
         'no-func-assign': 2,
+        'no-import-assign': 'error',
         'no-inner-declarations': [2, 'functions'], // https://eslint.org/docs/rules/no-inner-declarations
         'no-invalid-regexp': 2, //https://eslint.org/docs/rules/no-invalid-regexp
         'no-irregular-whitespace': 2, // https://eslint.org/docs/rules/no-irregular-whitespace
