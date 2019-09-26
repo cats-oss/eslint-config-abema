@@ -30,5 +30,7 @@ module.exports = {
         'commonjs': true,
     },
 
+    'reportUnusedDisableDirectives': true,
+
     'root': true,
 };
