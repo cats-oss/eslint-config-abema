@@ -220,6 +220,11 @@ module.exports = {
         // Disabling this does not make sense completely.
         '@typescript-eslint/no-type-alias': 'off',
 
+        // This would find the possibility which we can unnecessary condition.
+        '@typescript-eslint/no-unnecessary-condition': ['warn', {
+            'ignoreRhs': false,
+        }],
+
         // Try to detect redundant case,
         '@typescript-eslint/no-unnecessary-qualifier': 'warn',
 
