@@ -179,6 +179,7 @@ module.exports = {
         'prefer-promise-reject-errors': [1, {
             'allowEmptyReject': true, // Enable to create empty rejected one for compositing promises.
         }],
+        'prefer-regex-literals': 'warn', // We don't have to use the constructor if we don't need create `RegEx` dynamically.
         'radix': 2, // Enforce 2nd argument of `parseInt()`.
 
         // I don't think this rule is always useful because `await` is not required for async function.
@@ -288,7 +289,9 @@ module.exports = {
                 'ObjectPattern': false,
             },
         }],
-        'computed-property-spacing': [2, 'never'],
+        'computed-property-spacing': [2, 'never', {
+            'enforceForClassMembers': true,
+        }],
         'consistent-this': [2, 'that'],
         'eol-last': [0, 'always'], // we don't have to restrict this. Use EditorConfig.
         'func-call-spacing': 2,
