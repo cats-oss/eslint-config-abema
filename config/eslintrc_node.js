@@ -15,6 +15,7 @@ module.exports = {
     'rules': {
         'node/exports-style': [1, 'module.exports'],
         'node/no-deprecated-api': 2, // we'd like to detect the case of using deprecated apis.
+        'node/no-exports-assign': 'error', // This simply checks human error.
         'node/no-extraneous-import': 2, // Specify more details in your project.
         'node/no-extraneous-require': 2, // Specify more details in your project.
         'node/no-missing-import': 2,
