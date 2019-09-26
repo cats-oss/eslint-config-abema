@@ -167,7 +167,10 @@ module.exports = {
 
         // Of course, this might be redundant if you set unhandledrejection event handler.
         // We still have some points which should be under discussion. See: #135
-        '@typescript-eslint/no-floating-promises': 'warn',
+        '@typescript-eslint/no-floating-promises': ['warn', {
+            // Promise might reject even if the its returned value is `void`.
+            'ignoreVoid': false,
+        }],
 
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
