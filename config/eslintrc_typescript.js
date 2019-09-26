@@ -30,6 +30,9 @@ module.exports = {
         // It will not be too much warn about it.
         '@typescript-eslint/ban-ts-ignore': 'error',
 
+        // We should sort with builtin rule.
+        '@typescript-eslint/brace-style': 'off',
+
         // This should be sorted with ESLint builtin rule.
         'camelcase': 'off',
         '@typescript-eslint/camelcase': ['error', {
