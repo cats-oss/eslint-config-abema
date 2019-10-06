@@ -55,7 +55,9 @@ module.exports = {
         // Thus I doubt that detecting race condition correctly & statically is hard without introducing other semantics.
         // So we regard this rule as meaningless actually and disable this.
         'require-atomic-updates ': 0, // https://eslint.org/docs/rules/require-atomic-updates
-        'use-isnan': 2, // Use `Number.isNaN`
+        'use-isnan': ['error', { // Use `Number.isNaN`
+            'enforceForSwitchCase': true,
+        }],
         'valid-typeof': [1, { 'requireStringLiterals': true }],
 
         // Best Practices
