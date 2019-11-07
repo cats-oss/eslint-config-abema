@@ -30,6 +30,7 @@ module.exports = {
         'no-extra-boolean-cast': 0, // Allow to cast to boolean with `!!bar`. This is common idiom.
         'no-extra-parens': [0, 'all', { // We'd like to write extra parens for readability.
             'nestedBinaryExpressions': false,
+            'enforceForNewInMemberExpressions': false,
         }],
         'no-extra-semi': 1,
         'no-func-assign': 2,
@@ -46,7 +47,9 @@ module.exports = {
         'no-unexpected-multiline': 1,
         'no-unreachable': 1,
         'no-unsafe-finally': 2, // https://eslint.org/docs/rules/no-unsafe-finally
-        'no-unsafe-negation': 2, // https://eslint.org/docs/rules/no-unsafe-negation
+        'no-unsafe-negation': [2, { // https://eslint.org/docs/rules/no-unsafe-negation
+            'enforceForOrderingRelations': true,
+        }],
         // This rule might be useful to detect a typical anti pattern about data race.
         // However, it could not detect the problem if we assign a value into an interim variable
         // because this rule only checks a syntax and ECMA262's semantics without other semantics.
@@ -57,6 +60,7 @@ module.exports = {
         'require-atomic-updates ': 0, // https://eslint.org/docs/rules/require-atomic-updates
         'use-isnan': ['error', { // Use `Number.isNaN`
             'enforceForSwitchCase': true,
+            'enforceForIndexOf': false, // IMO, this kind of rules without any static type information would mis-detect.
         }],
         'valid-typeof': [1, { 'requireStringLiterals': true }],
 
@@ -154,6 +158,7 @@ module.exports = {
         'no-octal-escape': 2, // https://eslint.org/docs/rules/no-octal-escape
         'no-param-reassign': [1, {
             'props': true
+            // 'ignorePropertyModificationsForRegex': [],
         }],
         'no-proto': 2,
         'no-redeclare': ['error', { 'builtinGlobals': true }],
