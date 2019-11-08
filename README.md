@@ -12,16 +12,21 @@
 
 ## Basic Principles for Settings
 
-- Ban a dangerous style.
-- Sort a style to avoid errors and to increase productivity.
-- We set rules as _error_ if we think such style causes mistake easily ABSOLUTELY.
+- Ban a dangerous coding practice.
+- Sort a practice to avoid errors and to increase productivity.
+- We set rules as _error_ if we think such practice causes mistake easily ABSOLUTELY.
   - In other words, we make them an error that dangerous, foot-gun, or explicit mistake.
-- We set rules as _warn_,  if we think such style might be ugly
+- We set rules as _warn_,  if we think such practice might be ugly
   but it's useful for debugging or you might write when trying an approach.
   - You can land a patch without fixing warning. But YOU should fix them.
 - We set rules as _off_ if it is just a stylistic problem and there are no increasing any productivity.
 - This rule set treats ECMA262 6th (ECMA2015) or later one as Tier 1 state.
   If you use this rules in ~ES5 environment, you may need to set some options.
+- This project **focus on avoiding a coding practices which causes a problem semantically**.
+  - We would continue to include a settings related to stylistic issue.
+    But **stylistic issue is not our top priority**.
+  - For stylistic issues, we recommend to use [Prettier](https://prettier.io/)
+    and [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
 
 
 ## How To Use
