@@ -2,6 +2,9 @@
 
 [![CircleCI](https://circleci.com/gh/cats-oss/eslint-config-abema.svg?style=svg)](https://circleci.com/gh/cats-oss/workflows/eslint-config-abema)
 
+_NOTE: By some reasons, core product lines including AbemaTV's web application have reduced the dependency for this. See [#247](https://github.com/cats-oss/eslint-config-abema/issues/247)_
+
+
 ## What is This?
 
 * This project is presets for eslint which we use in our some internal projects.
