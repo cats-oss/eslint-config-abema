@@ -10,23 +10,45 @@
   * This project just target presets of rules to set up your project _conveniently_.
 
 
-## Basic Principles for Settings
+## Motivation
 
-- Ban a dangerous coding practice.
-- Sort a practice to avoid errors and to increase productivity.
-- We set rules as _error_ if we think such practice causes mistake easily ABSOLUTELY.
+This project aims these things:
+
+- **Detect all possible trivial errors**
+  - Ban a dangerous coding practice.
+- **Guide a better implementation and debugging**
+  - Sort a practice to avoid errors and to increase productivity.
+  - We focus on avoiding a bad coding practices which causes a problem semantically.
+  - This rule set treats ECMA262 6th (ECMA2015) or later one as Tier 1 state.
+    If you use this rules in ~ES5 environment, you may need to set some options.
+- **Guide hassle-free code review**
+  - On code review, we focus better design, better naming, and better implementation.
+  - If a code has been passed by ESLint with this rule once,
+    we can assume that code would have a sufficient quality to check-in to a tree
+    if there are not any design, naming, or implementation problem.
+- **Focus on semantics, not stylistic issues**
+  - Stylistic Issues are business of a code formatter.
+    It is not work for today's human programmer. So _stylistic issue is not our top priority_.
+  - We recommend to use `--fix` option by ESLint or other code formatters.
+      - [Prettier](https://prettier.io/) and [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
+- **Control update cycle**.
+  - It's too hassle to manage a combination of non builtin rule sets.
+    Its hassle prevents us to use a latest toolchain. 
+
+
+### Basic Principles for Settings
+
+To achieve our motivation,
+
+- _error_
+  - we think such practice causes mistake easily ABSOLUTELY.
   - In other words, we make them an error that dangerous, foot-gun, or explicit mistake.
-- We set rules as _warn_,  if we think such practice might be ugly
+- _warn_
+  - we think such practice might be ugly
   but it's useful for debugging or you might write when trying an approach.
   - You can land a patch without fixing warning. But YOU should fix them.
-- We set rules as _off_ if it is just a stylistic problem and there are no increasing any productivity.
-- This rule set treats ECMA262 6th (ECMA2015) or later one as Tier 1 state.
-  If you use this rules in ~ES5 environment, you may need to set some options.
-- This project **focus on avoiding a coding practices which causes a problem semantically**.
-  - We would continue to include a settings related to stylistic issue.
-    But **stylistic issue is not our top priority**.
-  - For stylistic issues, we recommend to use [Prettier](https://prettier.io/)
-    and [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
+- _off_
+  - it is just a trivial stylistic problem and there are no increasing any productivity.
 
 
 ## How To Use
