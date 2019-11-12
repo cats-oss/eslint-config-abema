@@ -248,6 +248,10 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
 
         // This should be sorted with ESLint builtin rule.
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': 'error',
+
+        // This should be sorted with ESLint builtin rule.
         //
         // If your project only has TypeScript or you run ESLint for TypeScript separately from for JavaScript,
         // and if you use typescript compiler with `noUnused***` options,
