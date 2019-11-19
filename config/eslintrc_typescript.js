@@ -371,6 +371,14 @@ module.exports = {
         // This detects a common mistake which uses `+` for diffrent types.
         '@typescript-eslint/restrict-plus-operands': 'warn',
 
+        // I think it's error prone to implicit string conversion.
+        // But I also think this might be a noisy. It might be better to disable this for the future.
+        '@typescript-eslint/restrict-template-expressions': ['warn', {
+            'allowNumber': false,
+            'allowBoolean': false,
+            'allowNullable': false,
+        }],
+
         // At v1.12, this rule does not support the idion to convert to boolean value from other type one
         // like `!!<some non boolean value>`. So we disable this until fixing it.
         // FIXME: #152
