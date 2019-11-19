@@ -139,6 +139,11 @@ module.exports = {
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
 
+        // In a general case, we don't have to do this.
+        // This kind of `delete` operation causes an unnecessary shape transition.
+        // This _shape_ means Shape (SpiderMonkey), Hidden Class (V8), or Structure (JSC).
+        '@typescript-eslint/no-dynamic-delete': 'error',
+
         // This should be sorted with ESLint builtin rule.
         // Allow to set a no-op function.
         'no-empty-function': 'off',
@@ -246,6 +251,11 @@ module.exports = {
 
         // We allow this this kind of redundant code because it sometimes prevents a mistake.
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+
+        // I think this rule is useful.
+        // But I'm not sure about that the relation with `noImplicitAny` compiler option.
+        // FIXME(#257)
+        '@typescript-eslint/no-untyped-public-signature': 'off',
 
         // This should be sorted with ESLint builtin rule.
         'no-unused-expressions': 'off',
@@ -370,6 +380,18 @@ module.exports = {
 
         // This detects a common mistake which uses `+` for diffrent types.
         '@typescript-eslint/restrict-plus-operands': 'warn',
+
+        // I think it's error prone to implicit string conversion.
+        // But I also think this might be a noisy. It might be better to disable this for the future.
+        '@typescript-eslint/restrict-template-expressions': ['warn', {
+            'allowNumber': false,
+            'allowBoolean': false,
+            'allowNullable': false,
+        }],
+
+        // This should be sorted with ESLint builtin rule.
+        'space-before-function-paren': 'off',
+        '@typescript-eslint/space-before-function-paren': 'warn',
 
         // At v1.12, this rule does not support the idion to convert to boolean value from other type one
         // like `!!<some non boolean value>`. So we disable this until fixing it.
