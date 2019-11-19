@@ -139,6 +139,12 @@ module.exports = {
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
 
+
+        // In a general case, we don't have to do this.
+        // This kind of `delete` operation causes an unnecessary shape transition.
+        // This _shape_ means Shape (SpiderMonkey), Hidden Class (V8), or Structure (JSC).
+        '@typescript-eslint/no-dynamic-delete': 'error',
+
         // This should be sorted with ESLint builtin rule.
         // Allow to set a no-op function.
         'no-empty-function': 'off',
