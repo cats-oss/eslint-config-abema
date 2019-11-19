@@ -389,6 +389,14 @@ module.exports = {
             'allowNullable': false,
         }],
 
+        // This should be sorted with ESLint builtin rule.
+        'space-before-function-paren': 'off',
+        '@typescript-eslint/space-before-function-paren': ['warn', {
+            'anonymous': 'ignore',
+            'named': 'never',
+            'asyncArrow': 'ignore',
+        }],
+
         // At v1.12, this rule does not support the idion to convert to boolean value from other type one
         // like `!!<some non boolean value>`. So we disable this until fixing it.
         // FIXME: #152
