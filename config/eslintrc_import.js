@@ -208,4 +208,16 @@ module.exports = {
         ...moduleSystems,
         ...styleguide,
     },
+
+    'overrides': [
+        {
+            'files': ['*.mjs'],
+            'rules': {
+                // See https://nodejs.org/dist/latest-v13.x/docs/api/esm.html
+                'import/extensions': ['error', 'always', {
+                    'ignorePackages': true,
+                }],
+            },
+        },
+    ],
 };
