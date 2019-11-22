@@ -189,12 +189,13 @@ module.exports = {
     'settings': {
         'import/resolver': {
             'node': {
-                'extensions': ['.js', '.jsx', '.ts', '.tsx'],
+                'extensions': ['.mjs', '.js', '.jsx', '.ts', '.tsx'],
             },
         },
 
         // By default, this option does not include `.jsx` extension.
         'import/extensions': [
+            '.mjs',
             '.js',
             '.jsx',
         ],
