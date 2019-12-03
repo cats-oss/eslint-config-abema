@@ -115,6 +115,7 @@ module.exports = {
         'dot-location': 0, // This is just a stylistic issue.
         'dot-notation': 2, // We hate reflection by strings. It's possible error.
         'eqeqeq': [2, 'always'], // Don't use loosely equality operator.
+        'grouped-accessor-pairs': ['warn', 'getBeforeSet'], // getter/setter should be pairs
         'guard-for-in': 0, // This is an escape hatch to enumerate all members in prototype chain.
         'max-classes-per-file': 0, // We don't have to enable this. https://eslint.org/docs/rules/max-classes-per-file
         'no-alert': 1, // for debugging.
