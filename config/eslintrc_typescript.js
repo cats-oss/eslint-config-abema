@@ -169,6 +169,9 @@ module.exports = {
             // allowWithDecorator
         }],
 
+        // Detect redundant code
+        '@typescript-eslint/no-extra-non-null-assertion': 'warn',
+
         // This should be sorted with ESLint builtin rule.
         'no-extra-parens': 'off',
         '@typescript-eslint/no-extra-parens': 'off',
