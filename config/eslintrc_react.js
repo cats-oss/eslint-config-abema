@@ -158,6 +158,7 @@ module.exports = {
         'react/jsx-handler-names': [2, {
             'eventHandlerPrefix': 'on', // There is no event handler which is diffrent from this rules (`onBarFoo`).
             'eventHandlerPropPrefix': 'on',
+            'checkLocalVariables': false,
         }],
         // Sort with core's `indent` rule.
         'react/jsx-indent': [1, 4, {
@@ -181,6 +182,7 @@ module.exports = {
         'react/jsx-no-literals': 1,
         'react/jsx-no-target-blank': [1, { // see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
             'enforceDynamicLinks': 'always',
+            'allowReferrer': false,
         }],
         'react/jsx-no-undef': 2,
         // This rule is conservative choice for plain JS world.
@@ -205,6 +207,7 @@ module.exports = {
         'react/jsx-props-no-spreading': ['error', {
             'html': 'enforce',
             'custom': 'enforce',
+            'explicitSpread': 'enforce',
             'exceptions': [],
         }],
         'react/jsx-sort-default-props': 0,
