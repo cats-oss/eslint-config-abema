@@ -337,7 +337,12 @@ module.exports = {
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
 
-        // Recommend more simple syntax
+        // Recommend more simple syntax.
+        // XXX: However, without native support, this syntax might be code bloat.
+        '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+
+        // Recommend more simple syntax.
+        // XXX: However, without native support, this syntax might be code bloat.
         '@typescript-eslint/prefer-optional-chain': 'warn',
 
         // This rule is nice for refactoring, but I suspect to enable this at all time.
