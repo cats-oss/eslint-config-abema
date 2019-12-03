@@ -43,6 +43,7 @@ module.exports = {
         'no-obj-calls': 2, // https://eslint.org/docs/rules/no-obj-calls
         'no-prototype-builtins': 2, // https://eslint.org/docs/rules/no-prototype-builtins
         'no-regex-spaces': 2, // https://eslint.org/docs/rules/no-regex-spaces
+        'no-setter-return': 'error', // return in setter would be meaningless.
         'no-sparse-arrays': 2, // Ban `[,,]`
         'no-template-curly-in-string': 2,
         'no-unexpected-multiline': 1,
