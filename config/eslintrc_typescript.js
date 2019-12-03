@@ -281,6 +281,11 @@ module.exports = {
             'caughtErrors': 'all',
             'caughtErrorsIgnorePattern': '^_', // Allow `catch (_e) {...}`
         }],
+        // Ideally, we should use this rule instead of it for TypeScript code
+        // '@typescript-eslint/no-unused-vars-experimental': ['warn', {
+        //    'ignoredNamesRegex': '^_',
+        //    'ignoreArgsIfArgsAfterAreUsed': false,
+        // }],
 
         // This should be sorted with ESLint builtin rule.
         'no-use-before-define': 'off',
