@@ -391,7 +391,9 @@ module.exports = {
         '@typescript-eslint/require-await': 'off',
 
         // This detects a common mistake which uses `+` for diffrent types.
-        '@typescript-eslint/restrict-plus-operands': 'warn',
+        '@typescript-eslint/restrict-plus-operands': ['warn', {
+            'checkCompoundAssignments': true,
+        }],
 
         // I think it's error prone to implicit string conversion.
         // But I also think this might be a noisy. It might be better to disable this for the future.
