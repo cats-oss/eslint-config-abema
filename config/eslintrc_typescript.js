@@ -337,6 +337,9 @@ module.exports = {
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
 
+        // Recommend more simple syntax
+        '@typescript-eslint/prefer-optional-chain': 'warn',
+
         // This rule is nice for refactoring, but I suspect to enable this at all time.
         // This only covers `private` property and I don't think that it's pretty useful
         // to warn private properties' unnecessary mutability.
