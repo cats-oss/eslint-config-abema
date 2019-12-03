@@ -411,6 +411,9 @@ module.exports = {
             'allowNullable': false,
         }],
 
+        // FIXME: #272
+        // '@typescript-eslint/return-await'
+
         // This should be sorted with ESLint builtin rule.
         'space-before-function-paren': 'off',
         '@typescript-eslint/space-before-function-paren': ['warn', {
