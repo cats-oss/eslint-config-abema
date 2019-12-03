@@ -207,6 +207,7 @@ module.exports = {
         'react/jsx-props-no-spreading': ['error', {
             'html': 'enforce',
             'custom': 'enforce',
+            'explicitSpread': 'enforce',
             'exceptions': [],
         }],
         'react/jsx-sort-default-props': 0,
