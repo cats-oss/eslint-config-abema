@@ -120,6 +120,7 @@ module.exports = {
         'no-alert': 1, // for debugging.
         'no-caller': 2, // Don't touch `arguments` in a normal code.
         'no-case-declarations': 2, // https://eslint.org/docs/rules/no-case-declarations
+        'no-constructor-return': 'error', // Generally, we should not return object from _constructor_.
         'no-div-regex': 2, // https://eslint.org/docs/rules/no-div-regex
         'no-else-return': 0, // `else` branch sometimes means "A or B" explicitly.
         'no-empty-function': 0, // Allow to set a no-op function.
