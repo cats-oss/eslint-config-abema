@@ -165,6 +165,8 @@ module.exports = {
             // If there is the class which only have static members,
             // then we have a chance to refactoring them to simple module level variables.
             'allowStaticOnly': false,
+            // TypeScript decorator is still not standardized. We should not touch it.
+            // allowWithDecorator
         }],
 
         // This should be sorted with ESLint builtin rule.
