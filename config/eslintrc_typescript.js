@@ -244,6 +244,7 @@ module.exports = {
         // This would find the possibility which we can unnecessary condition.
         '@typescript-eslint/no-unnecessary-condition': ['warn', {
             'ignoreRhs': false,
+            'allowConstantLoopConditions': true,
         }],
 
         // Try to detect redundant case,
