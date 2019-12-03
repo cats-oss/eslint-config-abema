@@ -182,7 +182,15 @@ module.exports = {
         'react/jsx-no-literals': 1,
         'react/jsx-no-target-blank': [1, { // see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
             'enforceDynamicLinks': 'always',
-            'allowReferrer': false,
+            // For legacy browsers which does not support `rel=noopener`, this option is useful.
+            // But almost modern browser support it. We don't have to turn off this option
+            // if we don't care about legacy browsers (IE11 & legacy Edge!).
+            // If you need to support legacy IE11 & legacy Edge, turn off this option.
+            // See also
+            //  * https://caniuse.com/#feat=rel-noopener
+            //  * https://mathiasbynens.github.io/rel-noopener
+            //  * https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer
+            'allowReferrer': true,
         }],
         'react/jsx-no-undef': 2,
         // This rule is conservative choice for plain JS world.
