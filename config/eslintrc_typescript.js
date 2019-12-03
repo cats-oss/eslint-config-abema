@@ -37,6 +37,7 @@ module.exports = {
         'camelcase': 'off',
         '@typescript-eslint/camelcase': ['error', {
             'properties': 'always',
+            'genericType': 'never', // This rule is covered by @typescript-eslint/generic-type-naming
             'ignoreDestructuring': false,
         }],
 
