@@ -158,6 +158,7 @@ module.exports = {
         'react/jsx-handler-names': [2, {
             'eventHandlerPrefix': 'on', // There is no event handler which is diffrent from this rules (`onBarFoo`).
             'eventHandlerPropPrefix': 'on',
+            'checkLocalVariables': false,
         }],
         // Sort with core's `indent` rule.
         'react/jsx-indent': [1, 4, {
