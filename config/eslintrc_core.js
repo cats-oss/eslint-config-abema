@@ -415,6 +415,7 @@ module.exports = {
             { 'blankLine': 'any', 'prev': 'directive', 'next': 'directive' },
         ],
         'prefer-object-spread': 1, // https://eslint.org/docs/rules/prefer-object-spread
+        'prefer-exponentiation-operator': 0, // There is no reason to enforce `**` instead of Math.pow()
         'quotes': [2, 'single', {
             'avoidEscape': true,
             'allowTemplateLiterals': true,
