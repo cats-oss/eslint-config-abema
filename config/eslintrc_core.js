@@ -22,6 +22,7 @@ module.exports = {
         'no-control-regex': 2, // https://eslint.org/docs/rules/no-control-regex
         'no-debugger': 1, // debugger statement
         'no-dupe-args': 2, // https://eslint.org/docs/rules/no-dupe-args
+        'no-dupe-else-if': 'warn',
         'no-dupe-keys': 2, // in an object literal.
         'no-duplicate-case': 2, // https://eslint.org/docs/rules/no-duplicate-case
         'no-empty': 2, // https://eslint.org/docs/rules/no-empty
@@ -42,6 +43,7 @@ module.exports = {
         'no-obj-calls': 2, // https://eslint.org/docs/rules/no-obj-calls
         'no-prototype-builtins': 2, // https://eslint.org/docs/rules/no-prototype-builtins
         'no-regex-spaces': 2, // https://eslint.org/docs/rules/no-regex-spaces
+        'no-setter-return': 'error', // return in setter would be meaningless.
         'no-sparse-arrays': 2, // Ban `[,,]`
         'no-template-curly-in-string': 2,
         'no-unexpected-multiline': 1,
@@ -115,11 +117,13 @@ module.exports = {
         'dot-location': 0, // This is just a stylistic issue.
         'dot-notation': 2, // We hate reflection by strings. It's possible error.
         'eqeqeq': [2, 'always'], // Don't use loosely equality operator.
+        'grouped-accessor-pairs': ['warn', 'getBeforeSet'], // getter/setter should be pairs
         'guard-for-in': 0, // This is an escape hatch to enumerate all members in prototype chain.
         'max-classes-per-file': 0, // We don't have to enable this. https://eslint.org/docs/rules/max-classes-per-file
         'no-alert': 1, // for debugging.
         'no-caller': 2, // Don't touch `arguments` in a normal code.
         'no-case-declarations': 2, // https://eslint.org/docs/rules/no-case-declarations
+        'no-constructor-return': 'error', // Generally, we should not return object from _constructor_.
         'no-div-regex': 2, // https://eslint.org/docs/rules/no-div-regex
         'no-else-return': 0, // `else` branch sometimes means "A or B" explicitly.
         'no-empty-function': 0, // Allow to set a no-op function.
@@ -411,6 +415,7 @@ module.exports = {
             { 'blankLine': 'any', 'prev': 'directive', 'next': 'directive' },
         ],
         'prefer-object-spread': 1, // https://eslint.org/docs/rules/prefer-object-spread
+        'prefer-exponentiation-operator': 0, // There is no reason to enforce `**` instead of Math.pow()
         'quotes': [2, 'single', {
             'avoidEscape': true,
             'allowTemplateLiterals': true,
