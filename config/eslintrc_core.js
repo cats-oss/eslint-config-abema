@@ -22,6 +22,7 @@ module.exports = {
         'no-control-regex': 2, // https://eslint.org/docs/rules/no-control-regex
         'no-debugger': 1, // debugger statement
         'no-dupe-args': 2, // https://eslint.org/docs/rules/no-dupe-args
+        'no-dupe-else-if': 'warn',
         'no-dupe-keys': 2, // in an object literal.
         'no-duplicate-case': 2, // https://eslint.org/docs/rules/no-duplicate-case
         'no-empty': 2, // https://eslint.org/docs/rules/no-empty
