@@ -37,6 +37,7 @@ module.exports = {
         'camelcase': 'off',
         '@typescript-eslint/camelcase': ['error', {
             'properties': 'always',
+            'genericType': 'never', // This rule is covered by @typescript-eslint/generic-type-naming
             'ignoreDestructuring': false,
         }],
 
@@ -164,7 +165,12 @@ module.exports = {
             // If there is the class which only have static members,
             // then we have a chance to refactoring them to simple module level variables.
             'allowStaticOnly': false,
+            // TypeScript decorator is still not standardized. We should not touch it.
+            // allowWithDecorator
         }],
+
+        // Detect redundant code
+        '@typescript-eslint/no-extra-non-null-assertion': 'warn',
 
         // This should be sorted with ESLint builtin rule.
         'no-extra-parens': 'off',
@@ -241,6 +247,7 @@ module.exports = {
         // This would find the possibility which we can unnecessary condition.
         '@typescript-eslint/no-unnecessary-condition': ['warn', {
             'ignoreRhs': false,
+            'allowConstantLoopConditions': true,
         }],
 
         // Try to detect redundant case,
@@ -274,6 +281,11 @@ module.exports = {
             'caughtErrors': 'all',
             'caughtErrorsIgnorePattern': '^_', // Allow `catch (_e) {...}`
         }],
+        // Ideally, we should use this rule instead of it for TypeScript code
+        // '@typescript-eslint/no-unused-vars-experimental': ['warn', {
+        //    'ignoredNamesRegex': '^_',
+        //    'ignoreArgsIfArgsAfterAreUsed': false,
+        // }],
 
         // This should be sorted with ESLint builtin rule.
         'no-use-before-define': 'off',
@@ -324,6 +336,14 @@ module.exports = {
 
         // This bans legacy syntax.
         '@typescript-eslint/prefer-namespace-keyword': 'error',
+
+        // Recommend more simple syntax.
+        // XXX: However, without native support, this syntax might be code bloat.
+        '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+
+        // Recommend more simple syntax.
+        // XXX: However, without native support, this syntax might be code bloat.
+        '@typescript-eslint/prefer-optional-chain': 'warn',
 
         // This rule is nice for refactoring, but I suspect to enable this at all time.
         // This only covers `private` property and I don't think that it's pretty useful
@@ -379,7 +399,9 @@ module.exports = {
         '@typescript-eslint/require-await': 'off',
 
         // This detects a common mistake which uses `+` for diffrent types.
-        '@typescript-eslint/restrict-plus-operands': 'warn',
+        '@typescript-eslint/restrict-plus-operands': ['warn', {
+            'checkCompoundAssignments': true,
+        }],
 
         // I think it's error prone to implicit string conversion.
         // But I also think this might be a noisy. It might be better to disable this for the future.
@@ -388,6 +410,9 @@ module.exports = {
             'allowBoolean': false,
             'allowNullable': false,
         }],
+
+        // FIXME: #272
+        // '@typescript-eslint/return-await'
 
         // This should be sorted with ESLint builtin rule.
         'space-before-function-paren': 'off',
