@@ -106,6 +106,8 @@ const moduleSystems = {
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
     // These are useful for pure ES Module project.
+    // `allowConditionalRequire` might be useful for an universal codebase used in both browser and node.js
+    // But I think it's better to suppress warning by `eslint-disable-next-line`.
     'import/no-commonjs': 'off',
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
