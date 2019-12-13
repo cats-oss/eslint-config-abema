@@ -128,6 +128,7 @@ module.exports = {
             //   to know what we should initialize in the constructor to stabilize the object shape.
             // * It's the time to refactor the object if we'd like to mix the order of static fields & methods.
             'default': [
+                'signature',
                 'static-field',
                 'static-method',
                 'instance-field',
