@@ -106,6 +106,8 @@ const moduleSystems = {
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
     // These are useful for pure ES Module project.
+    // `allowConditionalRequire` might be useful for an universal codebase used in both browser and node.js
+    // But I think it's better to suppress warning by `eslint-disable-next-line`.
     'import/no-commonjs': 'off',
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
@@ -149,7 +151,12 @@ const styleguide = {
     'import/no-default-export': 'error',
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
-    'import/no-duplicates': 'warn',
+    'import/no-duplicates': ['warn', {
+        // XXX:
+        // browsers will resolve a path having query string as different module.
+        // Howver, I seem it is rare case in generally. So I disable this option and we should use `eslint-disable-next-line`
+        'considerQueryString': false,
+    }],
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
     'import/no-named-default': 'off',
@@ -165,6 +172,9 @@ const styleguide = {
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     'import/order': ['warn', {
+        'alphabetize': {
+            'order': 'asc',
+        },
         'groups': [
             'builtin',
             'external',
