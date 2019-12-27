@@ -22,7 +22,7 @@
   "optionalDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0"
   },
@@ -32,7 +32,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-markdown": "^1.0.1",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "react": "^16.12.0",
