@@ -288,11 +288,6 @@ module.exports = {
         // We allow this this kind of redundant code because it sometimes prevents a mistake.
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
 
-        // I think this rule is useful.
-        // But I'm not sure about that the relation with `noImplicitAny` compiler option.
-        // FIXME(#257)
-        '@typescript-eslint/no-untyped-public-signature': 'off',
-
         // This should be sorted with ESLint builtin rule.
         'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': 'error',
