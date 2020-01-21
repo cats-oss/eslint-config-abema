@@ -33,11 +33,16 @@ module.exports = {
             'allowInPropTypes': false, // We doubt this option is really useful.
         }],
         'react/forbid-prop-types': 0,
+
+        // TODO(#298): This rule should be sort with project style.
+        'react/function-component-definition': 0,
+
         'react/no-access-state-in-setstate': 1,
         // The index of `Array<T>` is not suitable for `key` props.
         // But this restriction does not prevent that the id for each items is just a sequence number of some list
         // even if a item has an "unique" id. This rule cannot prevent it. meaningless.
         'react/no-array-index-key': 0,
+        'react/no-adjacent-inline-elements': 0,
         'react/no-children-prop': 2, // children should be nested between the opening and closing tags.
         'react/no-danger': 2,
         'react/no-danger-with-children': 2,
@@ -180,6 +185,7 @@ module.exports = {
         'react/jsx-no-comment-textnodes': 2,
         'react/jsx-no-duplicate-props': 2,
         'react/jsx-no-literals': 1,
+        'react/jsx-no-script-url': 2,
         'react/jsx-no-target-blank': [1, { // see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
             'enforceDynamicLinks': 'always',
             // For legacy browsers which does not support `rel=noopener`, this option is useful.
