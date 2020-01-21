@@ -177,6 +177,10 @@ module.exports = {
         'no-extra-parens': 'off',
         '@typescript-eslint/no-extra-parens': 'off',
 
+        // This should be sorted with ESLint builtin rule.
+        'no-extra-semi': 'off',
+        '@typescript-eslint/no-extra-semi': 'warn',
+
         // Of course, this might be redundant if you set unhandledrejection event handler.
         // We still have some points which should be under discussion. See: #135
         '@typescript-eslint/no-floating-promises': ['warn', {
@@ -241,6 +245,9 @@ module.exports = {
             'allowDestructuring': false,
             'allowedNames': ['self'],
         }],
+
+        // Should throw only Error or derived classes.
+        '@typescript-eslint/no-throw-literal': 'error',
 
         // Disabling this does not make sense completely.
         '@typescript-eslint/no-type-alias': 'off',
