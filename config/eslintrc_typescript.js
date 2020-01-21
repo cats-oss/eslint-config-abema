@@ -59,6 +59,9 @@ module.exports = {
         // Each style has its own pros & cons.
         '@typescript-eslint/consistent-type-definitions': 'off',
 
+        // This avoid misusing functions
+        '@typescript-eslint/default-param-last': 'error',
+
         // TODO: (#64) @typescript-eslint/explicit-function-return-type
 
         // It's redundant to enforce to supply `public`.
@@ -71,6 +74,8 @@ module.exports = {
             },
         }],
 
+        // TODO: #301
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
 
         //  * We accept the style for T , TA , TAbc , TA1Bca , T1 , T2.
         //      * You seem this style is similar to C# or typescript compiler.
@@ -137,6 +142,8 @@ module.exports = {
             ],
         }],
 
+        // TODO(#300): '@typescript-eslint/naming-convention'
+
         // This should be sorted with ESLint builtin rule.
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
@@ -177,6 +184,10 @@ module.exports = {
         'no-extra-parens': 'off',
         '@typescript-eslint/no-extra-parens': 'off',
 
+        // This should be sorted with ESLint builtin rule.
+        'no-extra-semi': 'off',
+        '@typescript-eslint/no-extra-semi': 'warn',
+
         // Of course, this might be redundant if you set unhandledrejection event handler.
         // We still have some points which should be under discussion. See: #135
         '@typescript-eslint/no-floating-promises': ['warn', {
@@ -186,6 +197,10 @@ module.exports = {
 
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
+
+        // Basically, we should ban this kind of idioms.
+        // However, if you need to use `new Function`, then you can opt-out this rule.
+        '@typescript-eslint/no-implied-eval': 'error',
 
         // Type inference is useful feature for Gradual Typing and other static typing system.
         // However, over omission would increases compile (type checking) time and
@@ -221,6 +236,9 @@ module.exports = {
             'allowDefinitionFiles': true,
         }],
 
+        // Ban this pattern to keep type safety
+        '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
+
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-non-null-assertion': 'warn',
 
@@ -242,6 +260,9 @@ module.exports = {
             'allowedNames': ['self'],
         }],
 
+        // Should throw only Error or derived classes.
+        '@typescript-eslint/no-throw-literal': 'error',
+
         // Disabling this does not make sense completely.
         '@typescript-eslint/no-type-alias': 'off',
 
@@ -249,6 +270,8 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-condition': ['warn', {
             'ignoreRhs': false,
             'allowConstantLoopConditions': true,
+            // FIXME: #299
+            'checkArrayPredicates': false,
         }],
 
         // Try to detect redundant case,

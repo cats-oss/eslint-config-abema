@@ -173,6 +173,7 @@ const styleguide = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     'import/order': ['warn', {
         'alphabetize': {
+            'caseInsensitive': false,
             'order': 'asc',
         },
         'groups': [
