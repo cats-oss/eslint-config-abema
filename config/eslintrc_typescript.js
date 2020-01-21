@@ -77,17 +77,6 @@ module.exports = {
         // TODO: #301
         '@typescript-eslint/explicit-module-boundary-types': 'off',
 
-        //  * We accept the style for T , TA , TAbc , TA1Bca , T1 , T2.
-        //      * You seem this style is similar to C# or typescript compiler.
-        //      * This choise is for:
-        //          * future readability
-        //          * expressiveness
-        //          * Our target is an application, not library.
-        //          * Automate code review process and avoid the bike-shedding.
-        //  * We don't allow the style for `R`, `K`, `V`, or other forms which we can see in Java or other many languages.
-        //      * It's short but less information.
-        '@typescript-eslint/generic-type-naming': ['error', '^T([A-Z0-9][a-zA-Z0-9]*){0,1}$'],
-
         // TODO: @typescript-eslint/indent
 
         // [By TypeScript coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines),
@@ -142,7 +131,26 @@ module.exports = {
             ],
         }],
 
-        // TODO(#300): '@typescript-eslint/naming-convention'
+        '@typescript-eslint/naming-convention': ['error',
+            //  * We accept the style for T , TA , TAbc , TA1Bca , T1 , T2.
+            //      * You seem this style is similar to C# or typescript compiler.
+            //      * This choise is for:
+            //          * future readability
+            //          * expressiveness
+            //          * Our target is an application, not library.
+            //          * Automate code review process and avoid the bike-shedding.
+            //  * We don't allow the style for `R`, `K`, `V`, or other forms which we can see in Java or other many languages.
+            //      * It's short but less information.
+            {
+                'selector': 'typeParameter',
+                // 'format': ['PascalCase'],
+                // 'prefix': ['T'],
+                'custom': {
+                    'regex': '^T([A-Z0-9][a-zA-Z0-9]*){0,1}$',
+                    'match': true,
+                }
+            },
+        ],
 
         // This should be sorted with ESLint builtin rule.
         'no-array-constructor': 'off',
