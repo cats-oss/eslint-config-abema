@@ -191,6 +191,10 @@ module.exports = {
         // This is common pitfalls for beginners. We must ban.
         '@typescript-eslint/no-for-in-array': 'error',
 
+        // Basically, we should ban this kind of idioms.
+        // However, if you need to use `new Function`, then you can opt-out this rule.
+        '@typescript-eslint/no-implied-eval': 'error',
+
         // Type inference is useful feature for Gradual Typing and other static typing system.
         // However, over omission would increases compile (type checking) time and
         // lacks the aspect of type annotation benefits as _documentation_.
