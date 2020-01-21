@@ -74,13 +74,8 @@ module.exports = {
             },
         }],
 
-        // Function's in/out are one of the important place to ensure type safety.
-        '@typescript-eslint/explicit-module-boundary-types': ['warn', {
-            'allowTypedFunctionExpressions': true,
-            'allowHigherOrderFunctions': false,
-            'allowDirectConstAssertionInArrowFunctions': false,
-            'allowedNames': [],
-        }],
+        // TODO: #301
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
 
         //  * We accept the style for T , TA , TAbc , TA1Bca , T1 , T2.
         //      * You seem this style is similar to C# or typescript compiler.
@@ -287,6 +282,11 @@ module.exports = {
 
         // We allow this this kind of redundant code because it sometimes prevents a mistake.
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+
+        // I think this rule is useful.
+        // But I'm not sure about that the relation with `noImplicitAny` compiler option.
+        // FIXME(#257)
+        '@typescript-eslint/no-untyped-public-signature': 'off',
 
         // This should be sorted with ESLint builtin rule.
         'no-unused-expressions': 'off',
