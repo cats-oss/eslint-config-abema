@@ -74,6 +74,8 @@ module.exports = {
             },
         }],
 
+        // TODO: #301
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
 
         //  * We accept the style for T , TA , TAbc , TA1Bca , T1 , T2.
         //      * You seem this style is similar to C# or typescript compiler.
@@ -233,6 +235,9 @@ module.exports = {
             'allowDeclarations': true,
             'allowDefinitionFiles': true,
         }],
+
+        // Ban this pattern to keep type safety
+        '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
 
         // Please opt-out this rule if you don't have any workarounds.
         '@typescript-eslint/no-non-null-assertion': 'warn',
