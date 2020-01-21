@@ -74,8 +74,13 @@ module.exports = {
             },
         }],
 
-        // TODO: #301
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        // Function's in/out are one of the important place to ensure type safety.
+        '@typescript-eslint/explicit-module-boundary-types': ['warn', {
+            'allowTypedFunctionExpressions': true,
+            'allowHigherOrderFunctions': false,
+            'allowDirectConstAssertionInArrowFunctions': false,
+            'allowedNames': [],
+        }],
 
         //  * We accept the style for T , TA , TAbc , TA1Bca , T1 , T2.
         //      * You seem this style is similar to C# or typescript compiler.
