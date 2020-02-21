@@ -23,6 +23,9 @@ module.exports = {
         // If you don't have use `await`, then it should be removed to reduce internal works.
         '@typescript-eslint/await-thenable': 'warn',
 
+        // At almost case, ts-blahblah comment is explicit and it works well as an escape hatch.
+        '@typescript-eslint/ban-ts-comment': 'off',
+
         // We cannot define this. User project should enable this.
         '@typescript-eslint/ban-types': 'off',
 
@@ -45,6 +48,13 @@ module.exports = {
         '@typescript-eslint/class-name-casing': ['error', {
             // Don't export make it private.
             'allowUnderscorePrefix': false,
+        }],
+
+        // This should be sorted with ESLint builtin rule.
+        'comma-spacing': 'off',
+        '@typescript-eslint/comma-spacing': ['error', {
+            'before': false,
+            'after': true
         }],
 
         // Uniform the style.
@@ -327,6 +337,11 @@ module.exports = {
         // Thus it's emergency case if user disable its rule explicitly and we hasitate to stop it
         // because then user would know what they are doing.
         '@typescript-eslint/no-var-requires': 'off',
+
+        // FIXME(#317):
+        //      I think this rule should be enabled but I hesitate to enable it because
+        //      I don't have much information whether this rule is noisy or not.
+        // '@typescript-eslint/prefer-as-const': 'warn',
 
         // I seem almost user would use simple function type.
         // A person who uses an interface to express callbable signature is
