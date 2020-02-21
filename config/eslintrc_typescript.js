@@ -345,10 +345,8 @@ module.exports = {
         // because then user would know what they are doing.
         '@typescript-eslint/no-var-requires': 'off',
 
-        // FIXME(#317):
-        //      I think this rule should be enabled but I hesitate to enable it because
-        //      I don't have much information whether this rule is noisy or not.
-        // '@typescript-eslint/prefer-as-const': 'warn',
+        // I think this rule should be enabled.
+        '@typescript-eslint/prefer-as-const': 'warn',
 
         // I seem almost user would use simple function type.
         // A person who uses an interface to express callbable signature is
