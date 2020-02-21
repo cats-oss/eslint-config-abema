@@ -158,6 +158,10 @@ module.exports = {
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'error',
 
+        // This should be sorted with ESLint builtin rule.
+        'no-dupe-class-members': 'off',
+        '@typescript-eslint/no-dupe-class-members': 'error',
+
         // In a general case, we don't have to do this.
         // This kind of `delete` operation causes an unnecessary shape transition.
         // This _shape_ means Shape (SpiderMonkey), Hidden Class (V8), or Structure (JSC).
@@ -275,6 +279,9 @@ module.exports = {
 
         // Disabling this does not make sense completely.
         '@typescript-eslint/no-type-alias': 'off',
+
+        // For self-evident case, we don't have to write to compare.
+        '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'warn',
 
         // This would find the possibility which we can unnecessary condition.
         '@typescript-eslint/no-unnecessary-condition': ['warn', {
@@ -465,6 +472,9 @@ module.exports = {
         // like `!!<some non boolean value>`. So we disable this until fixing it.
         // FIXME: #152
         '@typescript-eslint/strict-boolean-expressions': 'off',
+
+        // This is nice to work with union.
+        '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
         // Basically, use ES Module import. // <reference path="" /> is just special case.
         '@typescript-eslint/triple-slash-reference': ['error', {
