@@ -255,21 +255,6 @@ module.exports = {
             'classes': true, // Class declarations are not hoisted. We should warn it.
         }],
 
-        // Node.js & CommonJS
-        'callback-return': 0, // https://eslint.org/docs/rules/callback-return
-        'global-require': 2,
-        'handle-callback-err': 0, // We does not always write for nodejs.
-        'no-buffer-constructor': 2,
-        'no-mixed-requires': [2, {
-            'grouping': true,
-        }],
-        'no-new-require': 2,
-        'no-path-concat': 2,
-        'no-process-env': 0,
-        'no-process-exit': 0,
-        'no-restricted-modules': 0, // https://eslint.org/docs/rules/no-restricted-modules
-        'no-sync': 1,
-
         // Stylistic Issues
         'array-bracket-newline ': 0,
         'array-bracket-spacing': 0, // https://eslint.org/docs/rules/array-bracket-spacing
