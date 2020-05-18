@@ -179,7 +179,7 @@ module.exports = {
         'react/jsx-no-bind': [2, { // Sort to bind with this in constructor.
             'ignoreDOMComponents': true,
             'ignoreRefs': true, // we may use `refs`.
-            'allowArrowFunctions': false,
+            'allowArrowFunctions': true,
             'allowBind': false,
         }],
         'react/jsx-no-comment-textnodes': 2,
