@@ -39,6 +39,7 @@ module.exports = {
         'no-inner-declarations': [2, 'functions'], // https://eslint.org/docs/rules/no-inner-declarations
         'no-invalid-regexp': 2, //https://eslint.org/docs/rules/no-invalid-regexp
         'no-irregular-whitespace': 2, // https://eslint.org/docs/rules/no-irregular-whitespace
+        'no-loss-of-precision': 'error',
         'no-misleading-character-class': 2, // https://eslint.org/docs/rules/no-misleading-character-class
         'no-obj-calls': 2, // https://eslint.org/docs/rules/no-obj-calls
         'no-prototype-builtins': 2, // https://eslint.org/docs/rules/no-prototype-builtins
