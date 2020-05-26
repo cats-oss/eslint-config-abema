@@ -119,6 +119,12 @@ module.exports = {
             },
 
             {
+                'selector': 'function',
+                // For React's Function Component, we need allow `PascalCase`.
+                'format': ['camelCase', 'PascalCase'],
+            },
+
+            {
                 'selector': 'parameter',
                 'format': ['camelCase'],
                 'leadingUnderscore': 'allow'
