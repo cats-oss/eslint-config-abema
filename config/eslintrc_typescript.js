@@ -136,9 +136,13 @@ module.exports = {
             {
                 'selector': 'memberLike',
                 'modifiers': ['private', 'protected'],
-                'format': null,
+                'format': ['camelCase'],
                 // FIXME: Does this option really work?
                 'leadingUnderscore': 'require',
+            },
+            {
+                'selector': 'enumMember',
+                'format': ['PascalCase'],
             },
 
             {
