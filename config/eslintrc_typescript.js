@@ -110,7 +110,9 @@ module.exports = {
         '@typescript-eslint/naming-convention': ['warn',
             {
                 'selector': 'default',
-                'format': ['camelCase']
+                'format': ['camelCase'],
+                // FIXME(#378): we intent this as workaround.
+                'leadingUnderscore': 'allow',
             },
 
             {
@@ -144,6 +146,7 @@ module.exports = {
                 'modifiers': ['private', 'protected'],
                 'format': ['camelCase'],
                 // FIXME: Does this option really work?
+                // See #378
                 'leadingUnderscore': 'require',
             },
             {
