@@ -9,3 +9,12 @@ updates:
   - A-dependency
   - I-dependency-gardening
   versioning-strategy: increase
+
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 999
+  labels:
+  - A-dependency
+  - I-dependency-gardening
