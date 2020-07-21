@@ -3,20 +3,12 @@
 
 'use strict';
 
+// https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
 module.exports = {
-
-    'plugins': [
-        'react-hooks',
+    'extends': [
+        'plugin:react-hooks/recommended',
     ],
 
-    // eslint-plugin-react-hooks
-    // https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
-    //
-    //  I think we should enable these rules as 'errors' because this plugin always provides rules
-    //  which detects possible errors.
-    /* eslint sort-keys: 'error' */
     'rules': {
-        'react-hooks/exhaustive-deps': 'error',
-        'react-hooks/rules-of-hooks': 'error',
     },
 };
