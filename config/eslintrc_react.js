@@ -173,7 +173,9 @@ module.exports = {
         'react/jsx-indent-props': 0, // we cannot force alphabetical order to our old codebase, and this is not any serious problem.
         'react/jsx-key': [1, {
             'checkFragmentShorthand': true,
+            'checkKeyMustBeforeSpread': false,
         }],
+        'react/jsx-newline': 0, // this should be covered by formatter.
         'react/jsx-max-depth': 0, // We should not restrict this by default.
         'react/jsx-max-props-per-line': 0, // we don't think this is serious problem.
         'react/jsx-no-bind': [2, { // Sort to bind with this in constructor.
@@ -183,6 +185,7 @@ module.exports = {
             'allowBind': false,
         }],
         'react/jsx-no-comment-textnodes': 2,
+        'react/jsx-no-constructed-context-values': 'warn',
         'react/jsx-no-duplicate-props': 2,
         'react/jsx-no-literals': 1,
         'react/jsx-no-script-url': 2,
@@ -197,6 +200,7 @@ module.exports = {
             //  * https://mathiasbynens.github.io/rel-noopener
             //  * https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer
             'allowReferrer': true,
+            'warnOnSpreadAttributes': true,
         }],
         'react/jsx-no-undef': 2,
         // This rule is conservative choice for plain JS world.
