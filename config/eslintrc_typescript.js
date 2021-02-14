@@ -394,10 +394,12 @@ module.exports = {
         // I think this rule should be enabled.
         '@typescript-eslint/prefer-as-const': 'warn',
 
-        // I seem almost user would use simple function type.
-        // A person who uses an interface to express callbable signature is
-        // know what they are doing.
-        '@typescript-eslint/prefer-function-type': 'error',
+        //  We should not enable this restrictions.
+        //  See:
+        //      - https://wikipedia.org/wiki/Open/closed_principle
+        //      - https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections
+        //      - https://www.typescriptlang.org/docs/handbook/advanced-types.html#interfaces-vs-type-aliases
+        '@typescript-eslint/prefer-function-type': 'off',
 
         // Today, in almost case, we don't have to write `for` loop because native implementations which supports
         // iterator protocols or you might use some down-level transformers. So I think we should enable this rule.
