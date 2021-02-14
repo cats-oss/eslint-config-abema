@@ -93,7 +93,8 @@ module.exports = {
         'react/prop-types': [1, {
             'skipUndeclared': false,
         }],
-        'react/react-in-jsx-scope': 1,
+        // See https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+        'react/react-in-jsx-scope': 'off',
         'react/require-default-props': 0, // This does not resolve the essence of problem.
         'react/require-optimization': [0, {
             'allowDecorators': []
@@ -237,7 +238,8 @@ module.exports = {
             'beforeSelfClosing': 'allow', // Allow to write more XML-ly
             'afterOpening': 'never',
         }],
-        'react/jsx-uses-react': 1,
+        // See https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+        'react/jsx-uses-react': 'off',
         'react/jsx-uses-vars': 1,
         'react/jsx-wrap-multilines': 2,
     }
