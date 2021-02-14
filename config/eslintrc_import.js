@@ -200,12 +200,13 @@ module.exports = {
     'settings': {
         'import/resolver': {
             'node': {
-                'extensions': ['.js', '.jsx', '.ts', '.tsx'],
+                'extensions': ['.mjs', '.js', '.jsx', '.ts', '.tsx'],
             },
         },
 
         // By default, this option does not include `.jsx` extension.
         'import/extensions': [
+            '.mjs',
             '.js',
             '.jsx',
         ],
@@ -219,4 +220,16 @@ module.exports = {
         ...moduleSystems,
         ...styleguide,
     },
+
+    'overrides': [
+        {
+            'files': ['*.mjs'],
+            'rules': {
+                // See https://nodejs.org/dist/latest-v13.x/docs/api/esm.html
+                'import/extensions': ['error', 'always', {
+                    'ignorePackages': true,
+                }],
+            },
+        },
+    ],
 };
