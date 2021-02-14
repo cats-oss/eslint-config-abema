@@ -487,5 +487,20 @@ module.exports = {
         'symbol-description': 2, // Force to pass the description to `Symbol()`.
         'template-curly-spacing': [1, 'never'], // https://eslint.org/docs/rules/template-curly-spacing
         'yield-star-spacing': [1, 'after'], // https://eslint.org/docs/rules/%20yield-star-spacing.html
-    }
+    },
+
+    'overrides': [
+        {
+            'files': ['*.cjs'],
+            'parserOptions': {
+                'sourceType': 'script',
+            },
+        },
+        {
+            'files': ['*.mjs'],
+            'parserOptions': {
+                'sourceType': 'module',
+            },
+        },
+    ],
 };
