@@ -117,7 +117,18 @@ module.exports = {
 
             {
                 'selector': 'variable',
-                'format': ['camelCase', 'UPPER_CASE']
+                'format': [
+                    'camelCase',
+                    'UPPER_CASE',
+                    // We need allow `PascalCase` for React component.
+                    // e.g.
+                    //  ```
+                    //  const SomeContext = React.useContext();
+                    //
+                    //  const MemoizedComponent = React.memo(function SomeComponent() {});
+                    //  ```
+                    'PascalCase',
+                ]
             },
 
             {
